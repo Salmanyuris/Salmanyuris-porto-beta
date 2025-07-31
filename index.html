@@ -1,0 +1,1082 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<title>Portfolio | Salman Yuris</title>
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<script src="https://cdn.tailwindcss.com"></script>
+		<link
+			href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css"
+			rel="stylesheet" />
+		<link
+			rel="stylesheet"
+			href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
+		<style>
+			html,
+			body {
+				scroll-behavior: smooth;
+				height: 100%;
+				margin: 0;
+				padding: 0;
+				background-color: #111827; /* bg-gray-900 */
+				position: relative;
+				overflow-x: hidden;
+			}
+			.background-grid::before {
+				content: "";
+				position: fixed;
+				top: 0;
+				left: 0;
+				right: 0;
+				bottom: 0;
+				background-image: linear-gradient(
+						to right,
+						rgba(255, 255, 255, 0.05) 1px,
+						transparent 1px
+					),
+					linear-gradient(
+						to bottom,
+						rgba(255, 255, 255, 0.05) 1px,
+						transparent 1px
+					);
+				background-size: 40px 40px;
+				pointer-events: none;
+				z-index: 0;
+			}
+			.background-grid::after {
+				content: "";
+				position: fixed;
+				top: 0;
+				left: 0;
+				right: 0;
+				bottom: 0;
+				background: linear-gradient(to bottom, transparent, #203668d2);
+				pointer-events: none;
+				z-index: 1;
+				opacity: 0.6;
+			}
+			.toggle-smooth {
+				scroll-behavior: smooth;
+			}
+
+			/* Animasi bulatan latar */
+			.animated-bg span {
+				position: absolute;
+				border-radius: 9999px;
+				filter: blur(80px);
+				opacity: 0.6;
+				animation: move 20s ease-in-out infinite alternate;
+			}
+
+			.animated-bg span:nth-child(1) {
+				top: 10%;
+				left: 15%;
+				width: 300px;
+				height: 300px;
+				background-color: #34d399; /* green-400 */
+				animation-delay: 0s;
+			}
+
+			.animated-bg span:nth-child(2) {
+				top: 40%;
+				left: 60%;
+				width: 400px;
+				height: 400px;
+				background-color: #6366f1; /* indigo-500 */
+				animation-delay: 4s;
+			}
+
+			.animated-bg span:nth-child(3) {
+				top: 75%;
+				left: 30%;
+				width: 250px;
+				height: 250px;
+				background-color: #f59e0b; /* amber-500 */
+				animation-delay: 8s;
+			}
+
+			@keyframes move {
+				0% {
+					transform: translateY(0) scale(1);
+				}
+				100% {
+					transform: translateY(-50px) scale(1.2);
+				}
+			}
+		</style>
+	</head>
+
+	<body
+		class="bg-gray-900 text-white font-sans pt-20 background-grid text-white">
+		<!-- Navbar -->
+		<nav
+			class="bg-gray-800 px-6 py-4 rounded-lg fixed top-3 left-1/2 -translate-x-1/2 max-w-4xl w-[90%] z-50">
+			<div class="flex justify-between items-center">
+				<!-- Brand -->
+				<div class="text-white font-bold text-xl">
+					My<span class="text-green-500">Portfolio</span>
+				</div>
+
+				<!-- Hamburger (Mobile) -->
+				<div class="md:hidden">
+					<button id="menu-toggle" class="text-green-500 focus:outline-none">
+						<svg
+							class="w-6 h-6"
+							fill="none"
+							stroke="currentColor"
+							viewBox="0 0 24 24">
+							<path
+								stroke-linecap="round"
+								stroke-linejoin="round"
+								stroke-width="2"
+								d="M4 6h16M4 12h16M4 18h16" />
+						</svg>
+					</button>
+				</div>
+
+				<!-- Menu (Desktop) -->
+				<ul id="menu" class="hidden md:flex justify-center space-x-8">
+					<li>
+						<a class="hover:text-green-500 transition" href="#home">Home</a>
+					</li>
+					<li>
+						<a class="hover:text-green-500 transition" href="#portfolio"
+							>Portfolio</a
+						>
+					</li>
+					<li>
+						<a class="hover:text-green-500 transition" href="#education"
+							>Education</a
+						>
+					</li>
+					<li>
+						<a class="hover:text-green-500 transition" href="#skill">Skill</a>
+					</li>
+					<li>
+						<a class="hover:text-green-500 transition" href="#experience"
+							>Experience</a
+						>
+					</li>
+					<li>
+						<a class="hover:text-green-500 transition" href="#contact"
+							>Contact</a
+						>
+					</li>
+				</ul>
+			</div>
+
+			<!-- Menu (Mobile) -->
+			<ul
+				id="mobile-menu"
+				class="flex flex-col mt-4 space-y-4 md:hidden hidden">
+				<li>
+					<a class="hover:text-green-500 transition" href="#home">Home</a>
+				</li>
+				<li>
+					<a class="hover:text-green-500 transition" href="#portfolio"
+						>Portfolio</a
+					>
+				</li>
+				<li>
+					<a class="hover:text-green-500 transition" href="#education"
+						>Education</a
+					>
+				</li>
+				<li>
+					<a class="hover:text-green-500 transition" href="#skill">Skill</a>
+				</li>
+				<li>
+					<a class="hover:text-green-500 transition" href="#contact">Contact</a>
+				</li>
+			</ul>
+		</nav>
+
+		<!-- Home Section -->
+		<div class="relative z-10 min-h-screen flex items-center justify-center">
+			<section class="p-8 min-h-screen flex flex-col" id="home">
+				<div
+					class="max-w-4xl mx-auto mt-16 flex flex-col md:flex-row items-center">
+					<div class="md:w-2/3 p-4">
+						<h1 class="text-4xl font-bold">Hello,</h1>
+						<h2 class="text-4xl font-bold">
+							<span class="text-white">I’m </span
+							><span class="text-green-500" id="typewriter"></span>
+						</h2>
+						<p class="mt-4 text-gray-300">
+							Welcome to my portfolio! I specialize in Cloud Computing, Data
+							Analysis, Web Design, and UI/UX Design, where I combine
+							creativity, precision, and passion to craft unique and impactful
+							experiences. Take a look and let’s work together to create
+							something extraordinary!
+						</p>
+						<div class="flex space-x-4 mt-6">
+							<button
+								class="bg-green-500 hover:bg-gray-600 hover:text-green-500 rounded-lg p-2 transition-all"
+								style="font-family: Poppins">
+								Email
+							</button>
+							<button
+								class="bg-gray-600 hover:bg-green-500 rounded-lg p-2 transition-all"
+								style="font-family: Poppins">
+								Download CV
+							</button>
+						</div>
+						<div class="flex items-center space-x-6 mt-6">
+							<a
+								href="https://github.com/salmanyuris"
+								target="_blank"
+								class="text-gray-400 hover:text-green-500 transition"
+								><i class="fab fa-github text-2xl"></i
+							></a>
+							<a
+								href="https://facebook.com/salmanyuris"
+								target="_blank"
+								class="text-gray-400 hover:text-green-500 transition"
+								><i class="fab fa-facebook text-2xl"></i
+							></a>
+							<a
+								href="https://instagram.com/yazxal_"
+								target="_blank"
+								class="text-gray-400 hover:text-green-500 transition"
+								><i class="fab fa-instagram text-2xl"></i
+							></a>
+							<a
+								href="https://linkedin.com/in/salmanyuris"
+								target="_blank"
+								class="text-gray-400 hover:text-green-500 transition"
+								><i class="fab fa-linkedin text-2xl"></i
+							></a>
+							<a
+								href="https://www.youtube.com/@salmanyuris"
+								target="_blank"
+								class="text-gray-400 hover:text-green-500 transition"
+								><i class="fab fa-youtube text-2xl"></i
+							></a>
+						</div>
+					</div>
+
+					<!-- Profile Image and Bubbles (Hidden on Mobile) -->
+					<div class="relative w-64 h-64 hidden md:block group">
+						<div class="absolute inset-0 overflow-hidden -z-10">
+							<div
+								class="absolute w-32 h-32 bg-purple-500/60 rounded-full animate-pulse top-0 left-0"></div>
+							<div
+								class="absolute w-16 h-16 bg-green-400/60 rounded-full animate-bounce top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2"></div>
+						</div>
+						<img
+							src="img/pp.png"
+							alt="Profile Image"
+							class="w-[500px] h-auto object-contain z-1 transition-opacity duration-500 opacity-100 group-hover:opacity-0 absolute" />
+						<img
+							src="img/pp2.png"
+							alt="Profile Hover Image"
+							class="w-[500px] h-auto object-contain z-10 transition-opacity duration-500 opacity-0 group-hover:opacity-100 absolute" />
+					</div>
+				</div>
+			</section>
+		</div>
+		<!--End Home Sec-->
+
+		<section
+			id="portfolio"
+			class="relative bg-gray-900 text-white py-20 overflow-hidden">
+			<!-- Background Blur Animation -->
+			<div class="animated-bg pointer-events-none absolute inset-0 -z-10">
+				<span></span>
+				<span></span>
+				<span></span>
+			</div>
+
+			<div class="max-w-6xl mx-auto px-4">
+				<div class="text-center mb-12">
+					<h1 class="text-3xl font-bold text-green-500 hover:text-white">
+						My <span class="text-white hover:text-green-500">Portfolio</span>
+					</h1>
+					<p class="mt-2 text-gray-300">
+						Kumpulan karya terbaik dalam bidang teknologi dan desain
+					</p>
+				</div>
+
+				<div
+					id="portfolio-container"
+					class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8"></div>
+				<div class="flex justify-center mt-8 space-x-2" id="pagination"></div>
+			</div>
+
+			<style>
+				.animated-bg span {
+					position: absolute;
+					border-radius: 9999px;
+					filter: blur(80px);
+					opacity: 0.6;
+					animation: move 20s ease-in-out infinite alternate;
+				}
+				.animated-bg span:nth-child(1) {
+					top: 10%;
+					left: 15%;
+					width: 300px;
+					height: 300px;
+					background-color: #34d399;
+					animation-delay: 0s;
+				}
+				.animated-bg span:nth-child(2) {
+					top: 40%;
+					left: 60%;
+					width: 400px;
+					height: 400px;
+					background-color: #6366f1;
+					animation-delay: 4s;
+				}
+				.animated-bg span:nth-child(3) {
+					top: 75%;
+					left: 30%;
+					width: 250px;
+					height: 250px;
+					background-color: #f59e0b;
+					animation-delay: 8s;
+				}
+				@keyframes move {
+					0% {
+						transform: translateY(0) scale(1);
+					}
+					100% {
+						transform: translateY(-50px) scale(1.2);
+					}
+				}
+			</style>
+
+			<script>
+				const portfolioItems = [
+					{
+						img: "img/porto_diskominfo.png",
+						title: "Laravel",
+						desc: "Web Pendaftaran Magang Diskominfo Kab. Tegal.",
+						link: "https://github.com/Salmanyuris/Diskomifnfo-pkl-kab.tegal",
+					},
+					{
+						img: "img/porto_uiux.png",
+						title: "Figma",
+						desc: "UI Design K-LUXELIFE aplikasi mobile.",
+						link: "https://www.figma.com/proto/wuYJKSSB2qf5kvX261Ojfy/MiniTaskMySkill?page-id=&node-id=2-78&viewport=301%2C335%2C0.33&t=jGcgpEvRRotg9n5q-1&scaling=scale-down&content-scaling=fixed&starting-point-node-id=2%3A78&show-proto-sidebar=1",
+					},
+					{
+						img: "img/porto_sahastaapi.png",
+						title: "Express.js",
+						desc: "API Aplikasi SAHASTA – Sahabat Gizi Anak.",
+						link: "https://github.com/SAHASTA-team/SAHASTA-Backend-cc",
+					},
+					{
+						img: "img/Jurnal.png",
+						title: "Python (Data Science)",
+						desc: "Clustering and Profiling using K-Means.",
+						link: "https://github.com/Salmanyuris/Clustering-Profiling-FIFA",
+					},
+					{
+						img: "img/Sentimen.png",
+						title: "Python (Analisis Sentimen)",
+						desc: "Sentimen Analysis Biaya Pendidikan.",
+						link: "https://github.com/Salmanyuris/AnalisisSentimen-BiayaPendidikan",
+					},
+				];
+
+				const itemsPerPage = 3;
+				let currentPage = 1;
+
+				function renderPortfolio(page) {
+					const start = (page - 1) * itemsPerPage;
+					const end = start + itemsPerPage;
+					const container = document.getElementById("portfolio-container");
+					container.innerHTML = "";
+
+					portfolioItems.slice(start, end).forEach((item) => {
+						container.innerHTML += `
+                    <div class="bg-white/10 backdrop-blur-md rounded-lg shadow-xl overflow-hidden transform hover:scale-[1.03] hover:rotate-[-1deg] transition-all duration-500 border border-white/10">
+                        <img src="${item.img}" alt="${item.title}" class="w-full h-48 object-cover">
+                        <div class="p-4">
+                            <h2 class="text-xl font-bold text-green-400">${item.title}</h2>
+                            <p class="text-gray-300 text-sm mt-2">${item.desc}</p>
+                            <a href="${item.link}" target="_blank" class="block mt-4">
+                                <button class="w-full bg-green-500 hover:bg-green-600 text-white py-2 rounded-lg transition">Lihat Detail</button>
+                            </a>
+                        </div>
+                    </div>
+                `;
+					});
+				}
+
+				function renderPagination() {
+					const pageCount = Math.ceil(portfolioItems.length / itemsPerPage);
+					const pagination = document.getElementById("pagination");
+					pagination.innerHTML = "";
+
+					for (let i = 1; i <= pageCount; i++) {
+						pagination.innerHTML += `
+                    <button onclick="changePage(${i})"
+                        class="px-3 py-1 rounded ${
+													i === currentPage
+														? "bg-green-500 text-white"
+														: "bg-gray-700 text-gray-300"
+												} hover:bg-green-600 transition">
+                        ${i}
+                    </button>
+                `;
+					}
+				}
+
+				function changePage(page) {
+					currentPage = page;
+					renderPortfolio(page);
+					renderPagination();
+					window.scrollTo({
+						top: document.getElementById("portfolio").offsetTop,
+						behavior: "smooth",
+					});
+				}
+
+				renderPortfolio(currentPage);
+				renderPagination();
+			</script>
+		</section>
+
+		<!--end Porto section-->
+
+		<!--start edu-->
+		<section
+			class="p-8 min-h-screen flex flex-col items-center justify-center bg-gray-900"
+			id="education">
+			<div class="text-center mt-16">
+				<h1 class="text-3xl font-bold text-green-500 hover:text-white">
+					My <span class="text-white hover:text-green-500">Education</span>
+				</h1>
+			</div>
+
+			<div class="flex flex-wrap justify-center gap-8 mt-12 max-w-4xl">
+				<!-- CARD START -->
+				<div
+					class="bg-gray-800 rounded-lg shadow-lg p-6 w-full md:w-[45%] transform transition duration-500 hover:-translate-y-2 hover:shadow-2xl flex gap-4 items-start animate-slide-in">
+					<img
+						src="img/udinus.png"
+						alt="UDINUS Logo"
+						class="w-12 h-12 object-contain mt-1" />
+					<div>
+						<h2 class="text-xl font-semibold text-white">
+							Dian Nuswantoro University
+						</h2>
+						<p class="text-green-400 text-sm mt-1">
+							Bachelor of Information Systems (2021 – 2025)
+						</p>
+						<p class="text-gray-300 text-sm mt-3">
+							Focused on web programming, data analysis, and cloud computing
+							using modern technologies.
+						</p>
+					</div>
+				</div>
+
+				<!-- CARD 2 -->
+				<div
+					class="bg-gray-800 rounded-lg shadow-lg p-6 w-full md:w-[45%] transform transition duration-500 hover:-translate-y-2 hover:shadow-2xl flex gap-4 items-start animate-slide-in delay-100">
+					<img
+						src="img/ugm.png"
+						alt="UGM Logo"
+						class="w-12 h-12 object-contain mt-1" />
+					<div>
+						<h2 class="text-xl font-semibold text-white">
+							Gadjah Mada University (<i>Student Exchange</i>)
+						</h2>
+						<p class="text-green-400 text-sm mt-1">
+							Computer Science (2023 – 2024)
+						</p>
+						<p class="text-gray-300 text-sm mt-3">
+							Studied programming, software engineering, Machine Learning, and
+							UI/UX Design.
+						</p>
+					</div>
+				</div>
+
+				<!-- CARD 3 -->
+				<div
+					class="bg-gray-800 rounded-lg shadow-lg p-6 w-full md:w-[45%] transform transition duration-500 hover:-translate-y-2 hover:shadow-2xl flex gap-4 items-start animate-slide-in delay-200">
+					<img
+						src="img/sma.jpeg"
+						alt="SMA Logo"
+						class="w-12 h-12 object-contain mt-1" />
+					<div>
+						<h2 class="text-xl font-semibold text-white">SMAN 1 Balapulang</h2>
+						<p class="text-green-400 text-sm mt-1">
+							Social Science (2018 – 2021)
+						</p>
+						<p class="text-gray-300 text-sm mt-3">
+							Studied basic digital literacy including Microsoft Office and
+							Google Suite.
+						</p>
+					</div>
+				</div>
+
+				<!-- CARD 4 -->
+				<div
+					class="bg-gray-800 rounded-lg shadow-lg p-6 w-full md:w-[45%] transform transition duration-500 hover:-translate-y-2 hover:shadow-2xl flex gap-4 items-start animate-slide-in delay-300">
+					<img
+						src="img/bangkit.jpg"
+						alt="Bangkit Logo"
+						class="w-12 h-12 object-contain mt-1" />
+					<div>
+						<h2 class="text-xl font-semibold text-white">
+							Bangkit Academy - Led By Google, Goto, Tokopedia
+						</h2>
+						<p class="text-green-400 text-sm mt-1">
+							Cloud Computing (2024 – 2025)
+						</p>
+						<p class="text-gray-300 text-sm mt-3">
+							Studied Networking, Backend Engineering, and Google Cloud
+							Platform.
+						</p>
+					</div>
+				</div>
+			</div>
+		</section>
+		<!--end edu-->
+
+		<!--start skills-->
+		<section class="bg-gray-900 py-12 px-4" id="skill">
+			<div class="max-w-4xl mx-auto">
+				<div class="text-center mt-16">
+					<h1 class="text-3xl font-bold text-green-500 hover:text-white">
+						My <span class="text-white hover:text-green-500">Skills</span>
+					</h1>
+				</div>
+
+				<!-- Hard Skills -->
+				<div class="mb-12">
+					<h2
+						class="text-xl font-semibold text-green-500 mb-4 border-b border-gray-700 pb-1">
+						Hard Skills
+					</h2>
+					<div class="grid grid-cols-3 sm:grid-cols-4 gap-4">
+						<div
+							class="group relative bg-gray-800/50 border border-gray-700 rounded-lg p-4 flex items-center justify-center hover:bg-green-500/10 hover:-translate-y-1 transition">
+							<i
+								class="fab fa-html5 text-3xl text-orange-500 group-hover:scale-110"></i>
+							<span
+								class="absolute bottom-full mb-1 text-xs font-semibold text-white bg-gray-900 px-2 py-0.5 rounded opacity-0 group-hover:opacity-100 transition"
+								>HTML5</span
+							>
+						</div>
+						<div
+							class="group relative bg-gray-800/50 border border-gray-700 rounded-lg p-4 flex items-center justify-center hover:bg-green-500/10 hover:-translate-y-1 transition">
+							<i
+								class="fab fa-css3-alt text-3xl text-blue-500 group-hover:scale-110"></i>
+							<span
+								class="absolute bottom-full mb-1 text-xs font-semibold text-white bg-gray-900 px-2 py-0.5 rounded opacity-0 group-hover:opacity-100 transition"
+								>CSS3</span
+							>
+						</div>
+						<div
+							class="group relative bg-gray-800/50 border border-gray-700 rounded-lg p-4 flex items-center justify-center hover:bg-green-500/10 hover:-translate-y-1 transition">
+							<i
+								class="fab fa-js text-3xl text-yellow-400 group-hover:scale-110"></i>
+							<span
+								class="absolute bottom-full mb-1 text-xs font-semibold text-white bg-gray-900 px-2 py-0.5 rounded opacity-0 group-hover:opacity-100 transition"
+								>JavaScript</span
+							>
+						</div>
+						<div
+							class="group relative bg-gray-800/50 border border-gray-700 rounded-lg p-4 flex items-center justify-center hover:bg-green-500/10 hover:-translate-y-1 transition">
+							<i
+								class="fab fa-php text-3xl text-indigo-400 group-hover:scale-110"></i>
+							<span
+								class="absolute bottom-full mb-1 text-xs font-semibold text-white bg-gray-900 px-2 py-0.5 rounded opacity-0 group-hover:opacity-100 transition"
+								>PHP</span
+							>
+						</div>
+						<div
+							class="group relative bg-gray-800/50 border border-gray-700 rounded-lg p-4 flex items-center justify-center hover:bg-green-500/10 hover:-translate-y-1 transition">
+							<i
+								class="fab fa-laravel text-3xl text-red-500 group-hover:scale-110"></i>
+							<span
+								class="absolute bottom-full mb-1 text-xs font-semibold text-white bg-gray-900 px-2 py-0.5 rounded opacity-0 group-hover:opacity-100 transition"
+								>Laravel</span
+							>
+						</div>
+						<div
+							class="group relative bg-gray-800/50 border border-gray-700 rounded-lg p-4 flex items-center justify-center hover:bg-green-500/10 hover:-translate-y-1 transition">
+							<i
+								class="fab fa-python text-3xl text-yellow-300 group-hover:scale-110"></i>
+							<span
+								class="absolute bottom-full mb-1 text-xs font-semibold text-white bg-gray-900 px-2 py-0.5 rounded opacity-0 group-hover:opacity-100 transition"
+								>Python</span
+							>
+						</div>
+						<div
+							class="group relative bg-gray-800/50 border border-gray-700 rounded-lg p-4 flex items-center justify-center hover:bg-green-500/10 hover:-translate-y-1 transition">
+							<i
+								class="fab fa-node-js text-3xl text-green-400 group-hover:scale-110"></i>
+							<span
+								class="absolute bottom-full mb-1 text-xs font-semibold text-white bg-gray-900 px-2 py-0.5 rounded opacity-0 group-hover:opacity-100 transition"
+								>Node.js</span
+							>
+						</div>
+						<div
+							class="group relative bg-gray-800/50 border border-gray-700 rounded-lg p-4 flex items-center justify-center hover:bg-green-500/10 hover:-translate-y-1 transition">
+							<i
+								class="fas fa-database text-3xl text-blue-300 group-hover:scale-110"></i>
+							<span
+								class="absolute bottom-full mb-1 text-xs font-semibold text-white bg-gray-900 px-2 py-0.5 rounded opacity-0 group-hover:opacity-100 transition"
+								>MySQL</span
+							>
+						</div>
+						<div
+							class="group relative bg-gray-800/50 border border-gray-700 rounded-lg p-4 flex items-center justify-center hover:bg-green-500/10 hover:-translate-y-1 transition">
+							<i
+								class="fab fa-google text-3xl text-blue-400 group-hover:scale-110"></i>
+							<span
+								class="absolute bottom-full mb-1 text-xs font-semibold text-white bg-gray-900 px-2 py-0.5 rounded opacity-0 group-hover:opacity-100 transition"
+								>Google Cloud</span
+							>
+						</div>
+						<div
+							class="group relative bg-gray-800/50 border border-gray-700 rounded-lg p-4 flex items-center justify-center hover:bg-green-500/10 hover:-translate-y-1 transition">
+							<i
+								class="fab fa-figma text-3xl text-pink-400 group-hover:scale-110"></i>
+							<span
+								class="absolute bottom-full mb-1 text-xs font-semibold text-white bg-gray-900 px-2 py-0.5 rounded opacity-0 group-hover:opacity-100 transition"
+								>Figma</span
+							>
+						</div>
+						<div
+							class="group relative bg-gray-800/50 border border-gray-700 rounded-lg p-4 flex items-center justify-center hover:bg-green-500/10 hover:-translate-y-1 transition">
+							<i
+								class="fas fa-code text-3xl text-sky-500 group-hover:scale-110"></i>
+							<span
+								class="absolute bottom-full mb-1 text-xs font-semibold text-white bg-gray-900 px-2 py-0.5 rounded opacity-0 group-hover:opacity-100 transition"
+								>VS Code</span
+							>
+						</div>
+						<div
+							class="group relative bg-gray-800/50 border border-gray-700 rounded-lg p-4 flex items-center justify-center hover:bg-green-500/10 hover:-translate-y-1 transition">
+							<i
+								class="fas fa-robot text-3xl text-sky-500 group-hover:scale-110"></i>
+							<span
+								class="absolute bottom-full mb-1 text-xs font-semibold text-white bg-gray-900 px-2 py-0.5 rounded opacity-0 group-hover:opacity-100 transition"
+								>AI Prompting</span
+							>
+						</div>
+					</div>
+				</div>
+
+				<!-- Soft Skills -->
+				<div>
+					<h2
+						class="text-xl font-semibold Text-center text-green-500 mb-4 border-b border-gray-700 pb-1">
+						Soft Skills
+					</h2>
+					<div class="grid grid-cols-2 sm:grid-cols-3 gap-4">
+						<div
+							class="bg-gray-800/50 border border-gray-700 rounded-lg p-3 text-center text-white hover:bg-green-500/10 hover:-translate-y-1 transition">
+							<span class="text-sm font-medium">Project Management</span>
+						</div>
+						<div
+							class="bg-gray-800/50 border border-gray-700 rounded-lg p-3 text-center text-white hover:bg-green-500/10 hover:-translate-y-1 transition">
+							<span class="text-sm font-medium">Problem Solving</span>
+						</div>
+						<div
+							class="bg-gray-800/50 border border-gray-700 rounded-lg p-3 text-center text-white hover:bg-green-500/10 hover:-translate-y-1 transition">
+							<span class="text-sm font-medium">Adaptability</span>
+						</div>
+						<div
+							class="bg-gray-800/50 border border-gray-700 rounded-lg p-3 text-center text-white hover:bg-green-500/10 hover:-translate-y-1 transition">
+							<span class="text-sm font-medium">Time Management</span>
+						</div>
+						<div
+							class="bg-gray-800/50 border border-gray-700 rounded-lg p-3 text-center text-white hover:bg-green-500/10 hover:-translate-y-1 transition">
+							<span class="text-sm font-medium">Team Work</span>
+						</div>
+						<div
+							class="bg-gray-800/50 border border-gray-700 rounded-lg p-3 text-center text-white hover:bg-green-500/10 hover:-translate-y-1 transition">
+							<span class="text-sm font-medium">Critical Thinking</span>
+						</div>
+					</div>
+				</div>
+			</div>
+		</section>
+		<!--end skills-->
+
+		<!--start experience-->
+		<section class="bg-gray-900 py-20 px-4 mt-16" id="experience">
+			<div class="max-w-4xl mx-auto">
+				<div class="text-center mb-12">
+					<h1 class="text-3xl font-bold text-green-500 hover:text-white">
+						My <span class="text-white hover:text-green-500">Experience</span>
+					</h1>
+				</div>
+
+				<div class="relative">
+					<div
+						class="hidden md:block absolute w-0.5 h-full bg-gray-700 left-1/2 transform -translate-x-1/2"></div>
+
+					<!-- Pengalaman 1 -->
+					<div
+						class="mb-12 md:mb-8 flex md:justify-between items-center w-full flex-col md:flex-row">
+						<div class="hidden md:block md:w-5/12"></div>
+						<div
+							class="z-20 flex items-center order-1 bg-green-400 shadow-xl w-8 h-8 rounded-full">
+							<i class="fas fa-briefcase mx-auto text-white"></i>
+						</div>
+						<div
+							class="order-1 bg-gray-800/50 border border-gray-700 rounded-lg shadow-xl w-full md:w-5/12 px-6 py-5 mt-4 md:mt-0 hover:-translate-y-1 hover:shadow-green-500/20 transition">
+							<p class="text-sm font-semibold text-green-400">
+								Jan 2024 - Mar 2024
+							</p>
+							<h3 class="font-bold text-white text-xl mt-1">
+								Web Developer Intern
+							</h3>
+							<p class="text-sm font-medium text-gray-400">
+								Dinas Komunikasi dan Informatika kab. Tegal
+							</p>
+							<p class="text-sm text-gray-300 mt-3">
+								Mengembangkan Website pendaftaran magang dengan Laravel,
+								menyediakan fitur formulir digital, validasi data, manajemen
+								akun, dashboard admin, dan penyimpanan dokumen.
+							</p>
+						</div>
+					</div>
+
+					<!-- Pengalaman 2 -->
+					<div
+						class="mb-12 md:mb-8 flex md:justify-between items-center w-full flex-col md:flex-row-reverse">
+						<div class="hidden md:block md:w-5/12"></div>
+						<div
+							class="z-20 flex items-center order-1 bg-green-400 shadow-xl w-8 h-8 rounded-full">
+							<i class="fas fa-briefcase mx-auto text-white"></i>
+						</div>
+						<div
+							class="order-1 bg-gray-800/50 border border-gray-700 rounded-lg shadow-xl w-full md:w-5/12 px-6 py-5 mt-4 md:mt-0 hover:-translate-y-1 hover:shadow-green-500/20 transition">
+							<p class="text-sm font-semibold text-green-400">
+								Jul 2024 - Aug 2024
+							</p>
+							<h3 class="font-bold text-white text-xl mt-1">
+								Laboratory Assistant
+							</h3>
+							<p class="text-sm font-medium text-gray-400">
+								Universitas Dian Nuswantoro
+							</p>
+							<p class="text-sm text-gray-300 mt-3">
+								Membantu dosen dalam pelaksanaan praktikum, memastikan tugas
+								praktikum sesuai prosedur, mengevaluasi, dan memberikan umpan
+								balik.
+							</p>
+						</div>
+					</div>
+
+					<!-- Pengalaman 3 -->
+					<div
+						class="mb-12 md:mb-8 flex md:justify-between items-center w-full flex-col md:flex-row">
+						<div class="hidden md:block md:w-5/12"></div>
+						<div
+							class="z-20 flex items-center order-1 bg-green-400 shadow-xl w-8 h-8 rounded-full">
+							<i class="fas fa-briefcase mx-auto text-white"></i>
+						</div>
+						<div
+							class="order-1 bg-gray-800/50 border border-gray-700 rounded-lg shadow-xl w-full md:w-5/12 px-6 py-5 mt-4 md:mt-0 hover:-translate-y-1 hover:shadow-green-500/20 transition">
+							<p class="text-sm font-semibold text-green-400">
+								Jun 2023 - Jan 2025
+							</p>
+							<h3 class="font-bold text-white text-xl mt-1">
+								Mitra ShopeeFood Driver
+							</h3>
+							<p class="text-sm font-medium text-gray-400">
+								PT. Shopee Internasional Indonesia
+							</p>
+							<p class="text-sm text-gray-300 mt-3">
+								Mengantarkan pesanan makanan, mencatat transaksi dengan akurat,
+								menjaga komunikasi dengan pelanggan, memastikan kepuasan selama
+								proses pengantaran.
+							</p>
+						</div>
+					</div>
+
+					<!-- Pengalaman 4 -->
+					<div
+						class="mb-12 md:mb-8 flex md:justify-between items-center w-full flex-col md:flex-row-reverse">
+						<div class="hidden md:block md:w-5/12"></div>
+						<div
+							class="z-20 flex items-center order-1 bg-green-400 shadow-xl w-8 h-8 rounded-full">
+							<i class="fas fa-briefcase mx-auto text-white"></i>
+						</div>
+						<div
+							class="order-1 bg-gray-800/50 border border-gray-700 rounded-lg shadow-xl w-full md:w-5/12 px-6 py-5 mt-4 md:mt-0 hover:-translate-y-1 hover:shadow-green-500/20 transition">
+							<p class="text-sm font-semibold text-green-400">
+								Sep 2024 - Jan 2025
+							</p>
+							<h3 class="font-bold text-white text-xl mt-1">
+								Cloud Computing Learning Path
+							</h3>
+							<p class="text-sm font-medium text-gray-400">
+								SIB | Bangkit Academy - Led By Google, Goto, Tokopedia
+							</p>
+							<p class="text-sm text-gray-300 mt-3">
+								Mengembangkan API aplikasi SAHASTA dengan Express.js, Prisma,
+								integrasi Google Cloud, serta kontribusi dalam pengembangan
+								UI/UX.
+							</p>
+						</div>
+					</div>
+
+					<!-- Pengalaman 5 -->
+					<div
+						class="mb-12 md:mb-8 flex md:justify-between items-center w-full flex-col md:flex-row">
+						<div class="hidden md:block md:w-5/12"></div>
+						<div
+							class="z-20 flex items-center order-1 bg-green-400 shadow-xl w-8 h-8 rounded-full">
+							<i class="fas fa-briefcase mx-auto text-white"></i>
+						</div>
+						<div
+							class="order-1 bg-gray-800/50 border border-gray-700 rounded-lg shadow-xl w-full md:w-5/12 px-6 py-5 mt-4 md:mt-0 hover:-translate-y-1 hover:shadow-green-500/20 transition">
+							<p class="text-sm font-semibold text-green-400">
+								Agu 2023 - Agu 2024
+							</p>
+							<h3 class="font-bold text-white text-xl mt-1">
+								Pengurus Divisi Website
+							</h3>
+							<p class="text-sm font-medium text-gray-400">
+								Dian Nuswantoro Computer Club
+							</p>
+							<p class="text-sm text-gray-300 mt-3">
+								Berkontribusi dalam pembuatan Web utama DNCC di frontend,
+								pengelolaan materi pelatihan BTNG, dan pengelolaan Channel
+								Youtube DNCC.
+							</p>
+						</div>
+					</div>
+				</div>
+			</div>
+		</section>
+		<!--end experience-->
+
+		<!--start Contact-->
+		<section
+			id="contact"
+			class="relative bg-gray-900 text-white py-20 px-6 overflow-hidden">
+			<div
+				class="absolute inset-0 bg-gradient-to-br from-green-400/10 to-white/5 backdrop-blur-lg rounded-xl border border-white/10 shadow-xl pointer-events-none -z-10"></div>
+
+			<div class="max-w-4xl mx-auto text-center animate-fade-up duration-1000">
+				<h2
+					class="text-4xl font-bold text-green-400 mb-4 tracking-wide drop-shadow-md">
+					Get in <span class="text-white">Touch</span>
+				</h2>
+				<p class="text-gray-300 mb-10 max-w-xl mx-auto leading-relaxed">
+					I'm always open to discussing new projects, creative ideas, or
+					opportunities to be part of your vision. Feel free to reach out
+					through any of the platforms below.
+				</p>
+
+				<div class="flex justify-center gap-4 flex-wrap">
+					<a
+						href="mailto:salmanyuris45@gmail.com"
+						target="_blank"
+						class="bg-white/10 hover:bg-white/20 text-white font-medium py-3 px-6 rounded-xl transition-all duration-300 transform hover:scale-105 backdrop-blur-md border border-white/10 shadow-lg flex items-center gap-2">
+						<i class="fas fa-envelope"></i> Email Me
+					</a>
+					<a
+						href="https://wa.me/6283103743655"
+						target="_blank"
+						class="bg-white/10 hover:bg-white/20 text-white font-medium py-3 px-6 rounded-xl transition-all duration-300 transform hover:scale-105 backdrop-blur-md border border-white/10 shadow-lg flex items-center gap-2">
+						<i class="fab fa-whatsapp"></i> WhatsApp
+					</a>
+					<a
+						href="https://linkedin.com/in/salmanyuris"
+						target="_blank"
+						class="bg-white/10 hover:bg-white/20 text-white font-medium py-3 px-6 rounded-xl transition-all duration-300 transform hover:scale-105 backdrop-blur-md border border-white/10 shadow-lg flex items-center gap-2">
+						<i class="fab fa-linkedin"></i> LinkedIn
+					</a>
+				</div>
+			</div>
+		</section>
+		<!--end Contact-->
+
+		<!--start comment-->
+		<section
+			id="comments"
+			class="py-12 bg-gray-900 text-white flex flex-col items-center justify-center min-h-screen px-4 sm:px-6">
+			<h2 class="text-3xl font-bold text-green-500 mb-6 text-center">
+				Comments
+			</h2>
+
+			<div class="w-full max-w-xl">
+				<form id="commentForm" class="flex flex-col gap-4 mb-6">
+					<input
+						type="text"
+						id="commentName"
+						class="px-4 py-2 bg-gray-800 rounded-md placeholder-gray-400 text-white focus:ring-2 focus:ring-green-500 outline-none w-full"
+						placeholder="Your Name"
+						required />
+					<textarea
+						id="commentMessage"
+						class="px-4 py-2 bg-gray-800 rounded-md placeholder-gray-400 text-white focus:ring-2 focus:ring-green-500 outline-none w-full"
+						rows="4"
+						placeholder="Your Comment"
+						required></textarea>
+					<button
+						type="submit"
+						class="bg-green-500 hover:bg-green-600 text-white font-semibold px-6 py-2 rounded-md transition w-full sm:w-fit">
+						Add Comment
+					</button>
+				</form>
+
+				<ul id="commentList" class="space-y-6"></ul>
+			</div>
+
+			<!-- Modal for Editing Comment -->
+			<div
+				id="editModal"
+				class="fixed inset-0 bg-black bg-opacity-60 flex items-center justify-center z-50 hidden px-4">
+				<div
+					class="bg-gray-300 text-black p-6 rounded-lg w-full max-w-md shadow-lg animate__animated animate__fadeIn">
+					<h3 class="text-xl font-semibold mb-4">Edit Comment</h3>
+					<input
+						type="text"
+						id="editName"
+						class="w-full mb-3 px-3 py-2 border rounded focus:outline-none focus:ring-2 focus:ring-green-500"
+						placeholder="Edit Name" />
+					<textarea
+						id="editMessage"
+						rows="4"
+						class="w-full px-3 py-2 border rounded focus:outline-none focus:ring-2 focus:ring-green-500"
+						placeholder="Edit Message"></textarea>
+					<div class="flex flex-col sm:flex-row justify-end mt-4 gap-2">
+						<button
+							onclick="closeModal()"
+							class="bg-gray-400 hover:bg-gray-500 text-white px-4 py-2 rounded w-full sm:w-auto">
+							Cancel
+						</button>
+						<button
+							onclick="saveEdit()"
+							class="bg-green-500 hover:bg-green-600 text-white px-4 py-2 rounded w-full sm:w-auto">
+							Save
+						</button>
+					</div>
+				</div>
+			</div>
+		</section>
+		<!--end comment-->
+
+		<footer
+			class="bg-gray-900 text-gray-300 py-8 px-6 relative overflow-hidden">
+			<div
+				class="max-w-6xl mx-auto flex flex-col md:flex-row justify-between items-center gap-4 animate-fade-in-down">
+				<p class="text-sm text-center md:text-left">
+					&copy; 2025
+					<span class="text-green-400 font-semibold">Salman Yuris A.Z.</span>
+					All rights reserved.
+				</p>
+				<div class="flex gap-6 text-xl">
+					<a
+						href="https://www.linkedin.com/in/salmanyuris/"
+						class="hover:text-green-400 transition transform hover:scale-110 duration-300">
+						<i class="fab fa-linkedin"></i>
+					</a>
+					<a
+						href="https://github.com/Salmanyuris"
+						class="hover:text-green-400 transition transform hover:scale-110 duration-300">
+						<i class="fab fa-github"></i>
+					</a>
+					<a
+						href="https://www.instagram.com/yazxal_/"
+						class="hover:text-green-400 transition transform hover:scale-110 duration-300">
+						<i class="fab fa-instagram"></i>
+					</a>
+				</div>
+			</div>
+
+			<!--start comment-->
+
+			<!-- Animasi latar belakang -->
+			<div class="absolute top-0 left-0 w-full h-full pointer-events-none">
+				<div
+					class="absolute -top-10 -left-10 w-40 h-40 bg-green-500 opacity-10 rounded-full animate-pulse"></div>
+				<div
+					class="absolute bottom-0 right-0 w-32 h-32 bg-green-400 opacity-10 rounded-full animate-ping"></div>
+			</div>
+		</footer>
+
+		<script>
+			let editingElement = null;
+
+			document
+				.getElementById("commentForm")
+				.addEventListener("submit", function (e) {
+					e.preventDefault();
+
+					const nameInput = document.getElementById("commentName");
+					const messageInput = document.getElementById("commentMessage");
+
+					const name = nameInput.value.trim();
+					const message = messageInput.value.trim();
+
+					if (!name || !message) return;
+
+					const li = document.createElement("li");
+					li.className = "bg-gray-800 p-6 rounded-md shadow";
+
+					li.innerHTML = `
+				<div class="mb-4">
+				  <p class="text-green-400 font-semibold commenter-name">${name}</p>
+				  <p class="text-white comment-message mt-1">${message}</p>
+				</div>
+				<div class="flex gap-4">
+				  <button class="bg-yellow-500 hover:bg-yellow-600 text-white px-4 py-2 rounded text-sm" onclick="openModal(this)">Edit</button>
+				  <button class="bg-red-500 hover:bg-red-600 text-white px-4 py-2 rounded text-sm" onclick="deleteComment(this)">Delete</button>
+				</div>
+			  `;
+
+					document.getElementById("commentList").prepend(li);
+					nameInput.value = "";
+					messageInput.value = "";
+				});
+
+			function openModal(button) {
+				editingElement = button.closest("li");
+				const name =
+					editingElement.querySelector(".commenter-name").textContent;
+				const message =
+					editingElement.querySelector(".comment-message").textContent;
+
+				document.getElementById("editName").value = name;
+				document.getElementById("editMessage").value = message;
+
+				document.getElementById("editModal").classList.remove("hidden");
+			}
+
+			function closeModal() {
+				editingElement = null;
+				document.getElementById("editModal").classList.add("hidden");
+			}
+
+			function saveEdit() {
+				if (!editingElement) return;
+
+				const newName = document.getElementById("editName").value.trim();
+				const newMessage = document.getElementById("editMessage").value.trim();
+
+				if (!newName || !newMessage) return;
+
+				editingElement.querySelector(".commenter-name").textContent = newName;
+				editingElement.querySelector(".comment-message").textContent =
+					newMessage;
+
+				closeModal();
+			}
+
+			function deleteComment(button) {
+				const li = button.closest("li");
+				li.remove();
+			}
+		</script>
+
+		<!--end koment-->
+	</body>
+	<script src="scripts.js"></script>
+	<script
+		src="https://kit.fontawesome.com/yourkitid.js"
+		crossorigin="anonymous"></script>
+</html>
