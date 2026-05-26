@@ -92,9 +92,62 @@ const texts = [
   type();
 
   const menuToggle = document.getElementById("menu-toggle");
-			const mobileMenu = document.getElementById("mobile-menu");
+  const mobileMenu = document.getElementById("mobile-menu");
+  const menuIcon = document.getElementById("menu-icon");
 
-			menuToggle.addEventListener("click", () => {
-				mobileMenu.classList.toggle("hidden");
-			});
+  menuToggle.addEventListener("click", () => {
+    // Toggle menu visibility classes
+    mobileMenu.classList.toggle("max-h-0");
+    mobileMenu.classList.toggle("opacity-0");
+    mobileMenu.classList.toggle("max-h-[400px]");
+    mobileMenu.classList.toggle("opacity-100");
+    mobileMenu.classList.toggle("mt-4");
+    mobileMenu.classList.toggle("pb-2");
 
+    // Animate hamburger icon
+    if (mobileMenu.classList.contains("max-h-0")) {
+      menuIcon.classList.replace("fa-times", "fa-bars");
+      menuIcon.style.transform = "rotate(0deg)";
+    } else {
+      menuIcon.classList.replace("fa-bars", "fa-times");
+      menuIcon.style.transform = "rotate(90deg)";
+    }
+  });
+  // --- Light/Dark Mode Logic ---
+  const themeToggleMobile = document.getElementById("theme-toggle-mobile");
+  const themeToggleDesktop = document.getElementById("theme-toggle-desktop");
+  const themeIconMobile = document.getElementById("theme-icon-mobile");
+  const themeIconDesktop = document.getElementById("theme-icon-desktop");
+  const htmlElement = document.documentElement;
+
+  // Check saved theme or system preference
+  const savedTheme = localStorage.getItem("theme");
+  const systemPrefersDark = window.matchMedia("(prefers-color-scheme: dark)").matches;
+  
+  if (savedTheme === "dark" || (!savedTheme && systemPrefersDark)) {
+    htmlElement.classList.add("dark");
+    updateThemeIcons(true);
+  } else if (savedTheme === "light" || (!savedTheme && !systemPrefersDark)) {
+    htmlElement.classList.remove("dark");
+    updateThemeIcons(false);
+  }
+
+  function updateThemeIcons(isDark) {
+    if (isDark) {
+      themeIconMobile?.classList.replace("fa-moon", "fa-sun");
+      themeIconDesktop?.classList.replace("fa-moon", "fa-sun");
+    } else {
+      themeIconMobile?.classList.replace("fa-sun", "fa-moon");
+      themeIconDesktop?.classList.replace("fa-sun", "fa-moon");
+    }
+  }
+
+  function toggleTheme() {
+    htmlElement.classList.toggle("dark");
+    const isDark = htmlElement.classList.contains("dark");
+    localStorage.setItem("theme", isDark ? "dark" : "light");
+    updateThemeIcons(isDark);
+  }
+
+  if (themeToggleMobile) themeToggleMobile.addEventListener("click", toggleTheme);
+  if (themeToggleDesktop) themeToggleDesktop.addEventListener("click", toggleTheme);
