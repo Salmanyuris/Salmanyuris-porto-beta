@@ -50,30 +50,34 @@ document.addEventListener('DOMContentLoaded', function () {
     // --- Typewriter Animation ---
     const typewriterElement = document.getElementById('typewriter');
     if (typewriterElement) {
-        const texts = [
-            "Salman Yuris!",
-            "Web Developer!",
-            "Cloud Computing Engineer!",
-            "UI/UX Designer!",
-            "Data Scientist!",
-            "Laravel Developer!",
-            "Database Administrator!"
-        ];
+        let texts = (window.translations && window.translations[window.currentLang || 'id'])
+            ? window.translations[window.currentLang || 'id'].typewriter
+            : [
+                "Salman Yuris!",
+                "Software Quality Assurance!",
+                "Web Developer!",
+                "Cloud Computing Engineer!",
+                "UI/UX Designer!",
+                "Data Scientist!",
+                "Laravel Developer!",
+                "Database Administrator!"
+            ];
         let count = 0;
         let index = 0;
         let currentText = '';
         let letter = '';
+        let typewriterTimeout;
 
         function type() {
-            if (count === texts.length) count = 0;
+            if (count >= texts.length) count = 0;
             currentText = texts[count];
             letter = currentText.slice(0, ++index);
             typewriterElement.textContent = letter;
 
             if (letter.length === currentText.length) {
-                setTimeout(erase, 2000);
+                typewriterTimeout = setTimeout(erase, 2000);
             } else {
-                setTimeout(type, 100);
+                typewriterTimeout = setTimeout(type, 100);
             }
         }
 
@@ -83,11 +87,22 @@ document.addEventListener('DOMContentLoaded', function () {
 
             if (letter.length === 0) {
                 count++;
-                setTimeout(type, 500);
+                typewriterTimeout = setTimeout(type, 500);
             } else {
-                setTimeout(erase, 50);
+                typewriterTimeout = setTimeout(erase, 50);
             }
         }
+
+        window.resetTypewriter = function(newTexts) {
+            clearTimeout(typewriterTimeout);
+            texts = newTexts;
+            count = 0;
+            index = 0;
+            currentText = '';
+            letter = '';
+            type();
+        };
+
         type();
     }
 
@@ -144,4 +159,100 @@ document.addEventListener('DOMContentLoaded', function () {
 
     if (themeToggleMobile) themeToggleMobile.addEventListener("click", toggleTheme);
     if (themeToggleDesktop) themeToggleDesktop.addEventListener("click", toggleTheme);
+
+    // --- Language Selector Dropdowns ---
+    const langBtnFloating = document.getElementById("lang-btn-floating");
+    const langDropdownFloating = document.getElementById("lang-dropdown-floating");
+
+    if (langBtnFloating && langDropdownFloating) {
+        langBtnFloating.addEventListener("click", (e) => {
+            e.stopPropagation();
+            langDropdownFloating.classList.toggle("hidden");
+        });
+    }
+
+    // Click outside to close dropdowns
+    document.addEventListener("click", () => {
+        if (langDropdownFloating) langDropdownFloating.classList.add("hidden");
+    });
+
+    // Run initial translation update
+    if (window.updateTranslations) {
+        window.updateTranslations();
+    }
 });
+
+// --- Multi-Language i18n System ---
+window.currentLang = localStorage.getItem("lang") || "id";
+
+window.t = function(key) {
+    if (!window.translations || !window.translations[window.currentLang]) return key;
+    const keys = key.split('.');
+    let val = window.translations[window.currentLang];
+    for (const k of keys) {
+        if (val && val[k] !== undefined) {
+            val = val[k];
+        } else {
+            return key;
+        }
+    }
+    return val;
+};
+
+window.changeLanguage = function(lang) {
+    window.currentLang = lang;
+    localStorage.setItem("lang", lang);
+    window.updateTranslations();
+    
+    // Close dropdown
+    const dropdownFloating = document.getElementById("lang-dropdown-floating");
+    if (dropdownFloating) dropdownFloating.classList.add("hidden");
+};
+
+window.updateTranslations = function() {
+    const lang = window.currentLang;
+    
+    // Update HTML attributes
+    document.documentElement.lang = lang;
+    document.documentElement.dir = (lang === 'ar') ? 'rtl' : 'ltr';
+
+    // Update static text elements
+    document.querySelectorAll("[data-i18n]").forEach(elem => {
+        const key = elem.getAttribute("data-i18n");
+        const translation = window.t(key);
+        if (translation !== key) {
+            elem.innerHTML = translation;
+        }
+    });
+
+    // Update placeholders
+    document.querySelectorAll("[data-i18n-placeholder]").forEach(elem => {
+        const key = elem.getAttribute("data-i18n-placeholder");
+        const translation = window.t(key);
+        if (translation !== key) {
+            elem.placeholder = translation;
+        }
+    });
+
+    // Update tab title
+    const titleKey = "title";
+    const titleTrans = window.t(titleKey);
+    if (titleTrans !== titleKey) {
+        document.title = titleTrans;
+    }
+
+
+
+    // Reset typewriter animation with new language texts
+    if (window.resetTypewriter && window.translations && window.translations[lang]) {
+        window.resetTypewriter(window.translations[lang].typewriter);
+    }
+
+    // Re-render portfolio if defined
+    if (typeof renderPortfolio === 'function') {
+        renderPortfolio(currentPage || 1);
+    }
+    if (typeof renderPagination === 'function') {
+        renderPagination();
+    }
+};
