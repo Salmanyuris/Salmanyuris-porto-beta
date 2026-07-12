@@ -11,7 +11,7 @@ const translations = {
         },
         hero: {
             hello: "Halo,",
-            welcome: "Selamat datang di portofolio saya! Saya berspesialisasi dalam Cloud Computing, Analisis Data, Pengembangan Web, dan Desain UI/UX, memadukan kreativitas, presisi, dan semangat untuk menciptakan pengalaman yang unik dan berdampak. Mari berkolaborasi untuk menciptakan sesuatu yang luar biasa!",
+            welcome: "Selamat datang di portofolio saya! Sebagai seorang Software Quality Assurance Junior, saya berkomitmen untuk memastikan keandalan, stabilitas, dan performa optimal pada setiap produk digital. Didukung keahlian komplementer di bidang Cloud Computing, Analisis Data, Pengembangan Web, dan Desain UI/UX, saya mengintegrasikan ketelitian teknis, kreativitas, dan standar kualitas tinggi untuk menghadirkan solusi teknologi yang berdampak nyata. Mari berkolaborasi untuk menciptakan inovasi digital yang luar biasa!",
             email: "Email",
             downloadCv: "Unduh CV"
         },
@@ -153,7 +153,7 @@ const translations = {
         },
         hero: {
             hello: "Hello,",
-            welcome: "Welcome to my portfolio! I specialize in Cloud Computing, Data Analysis, Web Design, and UI/UX Design, where I combine creativity, precision, and passion to craft unique and impactful experiences. Take a look and let’s work together to create something extraordinary!",
+            welcome: "Welcome to my portfolio! As a Junior Software Quality Assurance professional, I am dedicated to ensuring the reliability, stability, and optimal performance of digital systems. Supported by complementary expertise in Cloud Computing, Data Analysis, Web Development, and UI/UX Design, I integrate technical precision, creativity, and rigorous quality standards to deliver high-impact technological solutions. Let's collaborate to build extraordinary digital innovations!",
             email: "Email",
             downloadCv: "Download CV"
         },
@@ -295,7 +295,7 @@ const translations = {
         },
         hero: {
             hello: "مرحباً،",
-            welcome: "مرحباً بكم في معرض أعمالي! أنا متخصص في الحوسبة السحابية، وتحليل البيانات، وتطوير الويب، وتصميم واجهات المستخدم (UI/UX)، حيث أجمع بين الإبداع والدقة والشغف لتقديم تجارب فريدة ومؤثرة. ألقِ نظرة ودعنا نعمل معاً لابتكار شيء استثنائي!",
+            welcome: "مرحباً بكم في معرض أعمالي! أعمل حالياً كمسؤول مبتدئ لضمان جودة البرمجيات (Software Quality Assurance Junior)، مع خبرة مكملة في الحوسبة السحابية، وتحليل البيانات، وتطوير الويب، وتصميم واجهات المستخدم (UI/UX). أجمع بين الدقة التقنية، والإبداع، والالتزام بالجودة لضمان أداء مثالي وتقديم تجارب رقمية ذات أثر ملموس. دعونا نتعاون لبناء حلول تكنولوجية استثنائية!",
             email: "البريد الإلكتروني",
             downloadCv: "تحميل السيرة الذاتية"
         },
@@ -437,7 +437,7 @@ const translations = {
         },
         hero: {
             hello: "こんにちは、",
-            welcome: "ポートフォリオへようこそ！私はクラウドコンピューティング、データ分析、ウェブデザイン、そしてUI/UXデザインを専門とし、創造性、精密さ、そして情熱を融合させて、ユニークで影響力のある体験を生み出しています。ぜひご覧いただき、素晴らしいものを一緒に作り上げましょう！",
+            welcome: "ポートフォリオへようこそ！現在、ジュニアソフトウェア品質保証（Software Quality Assurance Junior）として活動しながら、クラウドコンピューティング、データ分析、Web開発、およびUI/UXデザインの専門知識も有しています。技術的な精密さ、創造性、そして品質への強いこだわりを融合させ、最適なパフォーマンスを保証し、インパクトのあるデジタル体験を提供します。素晴らしい技術ソリューションを一緒に作り上げましょう！",
             email: "メール",
             downloadCv: "CVをダウンロード"
         },
