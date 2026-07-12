@@ -35,7 +35,9 @@ const translations = {
             project5Title: "Sentiment Analysis",
             project5Desc: "Menganalisis sentimen publik tentang biaya pendidikan menggunakan teknik NLP.",
             project6Title: "Sistem Laporan Produksi PT. DSI",
-            project6Desc: "Sistem informasi berbasis web untuk memantau, mencatat, dan melaporkan hasil produksi harian di PT. DSI secara real-time."
+            project6Desc: "Sistem informasi berbasis web untuk memantau, mencatat, dan melaporkan hasil produksi harian di PT. DSI secara real-time.",
+            project7Title: "Prediksi Produksi Padi",
+            project7Desc: "Analisis feature importance dan estimasi produksi padi menggunakan algoritma Machine Learning."
         },
         education: {
             title: "Pendidikan",
@@ -107,6 +109,27 @@ const translations = {
         footer: {
             rights: "Hak cipta dilindungi undang-undang."
         },
+        riceAnalysis: {
+            title: "Studi Kasus: Analisis Pentingnya Fitur (Feature Importance)",
+            subtitle: "Mengapa Luas Panen Menjadi Penentu Utama dalam Prediksi Produksi Padi?",
+            intro: "Dalam pemodelan Machine Learning (seperti Random Forest atau XGBoost) untuk memprediksi produksi padi di Indonesia, analisis kontribusi variabel (Feature Importance) menunjukkan perbedaan signifikansi yang mencolok antar fitur. Berikut adalah visualisasi data pentingnya fitur beserta pembahasan ilmiahnya.",
+            table: {
+                feature: "Fitur / Variabel",
+                score: "Skor Kepentingan",
+                description: "Deskripsi",
+                luasPanenDesc: "Total luas area lahan padi yang dipanen (Hektar)",
+                curahHujanDesc: "Rata-rata curah hujan tahunan (mm/tahun)",
+                kelembapanDesc: "Tingkat kelembapan udara rata-rata (%)",
+                suhuDesc: "Suhu udara rata-rata harian (°C)",
+                tahunDesc: "Indeks tahun data historis (Waktu)"
+            },
+            dominanTitle: "Mengapa Luas Panen Paling Dominan?",
+            dominanDesc: "Secara ilmiah, <strong>Luas Panen</strong> memiliki korelasi linear yang sangat kuat (sering kali r > 0.95) dengan total produksi. Hubungan fisik-matematis ini didasarkan pada rumus dasar produksi pertanian: <em>Produksi = Luas Panen × Produktivitas (Yield)</em>. Variasi luas panen antar wilayah (provinsi/kabupaten) sangat besar (skala spasial), sehingga mendominasi varians target data. Sementara faktor iklim seperti suhu dan curah hujan memengaruhi produktivitas per hektar (fluktuasi skala kecil), ukuran fisik 'pabrik biologis' (luas lahan) tetap menentukan kapasitas maksimum produksi secara mutlak.",
+            tahunTitle: "Mengapa Pengaruh Tahun Sangat Kecil?",
+            tahunDesc: "Variabel <strong>Tahun</strong> bertindak sebagai indeks temporal linear dan tidak merepresentasikan proses biofisik nyata dalam pertumbuhan tanaman. Padi tumbuh berdasarkan fotosintesis yang dipengaruhi oleh air, radiasi matahari, dan nutrisi tanah, bukan berjalannya waktu kalender. Selain itu, perkembangan teknologi pertanian (benih unggul, irigasi, pupuk) terjadi secara bertahap dan non-linear, yang dampaknya telah tercermin secara tidak langsung pada tren luas panen dan produktivitas. Algoritma berbasis pohon (seperti Random Forest) juga cenderung mengabaikan variabel tren monotonik jika variabel fisik yang lebih berkorelasi kuat (luas panen) sudah tersedia.",
+            discussionTitle: "Pembahasan Ilmiah & Kesimpulan",
+            discussionContent: "Studi agronomi menegaskan bahwa perluasan area panen (ekstensifikasi) adalah penggerak utama volume produksi di negara berkembang. Faktor iklim (curah hujan, suhu) berperan sebagai pembatas (limiting factors) yang memicu kegagalan panen atau penurunan kualitas yield, namun tidak mengubah skala magnitudo produksi sebesar perubahan luas lahan. Oleh karena itu, model machine learning secara logis menempatkan Luas Panen pada bobot kepentingan tertinggi (~88.5%) dan memposisikan Tahun hanya sebagai fitur pembantu indeks temporal dengan kontribusi minimal (~0.8%)."
+        },
         typewriter: [
             "Salman Yuris!",
             "Software Quality Assurance!",
@@ -154,7 +177,9 @@ const translations = {
             project5Title: "Sentiment Analysis",
             project5Desc: "Analyzing public sentiment on education costs using NLP techniques.",
             project6Title: "Production Reporting System PT. DSI",
-            project6Desc: "Web-based information system to monitor, record, and report daily production output at PT. DSI in real-time."
+            project6Desc: "Web-based information system to monitor, record, and report daily production output at PT. DSI in real-time.",
+            project7Title: "Rice Production Prediction",
+            project7Desc: "Feature importance analysis and rice production estimation using Machine Learning algorithms."
         },
         education: {
             title: "Education",
@@ -226,6 +251,27 @@ const translations = {
         footer: {
             rights: "All rights reserved."
         },
+        riceAnalysis: {
+            title: "Case Study: Feature Importance Analysis",
+            subtitle: "Why is Harvested Area the Primary Determinant in Rice Production Prediction?",
+            intro: "In Machine Learning modeling (such as Random Forest or XGBoost) to predict rice production in Indonesia, variable contribution analysis (Feature Importance) reveals a striking difference in significance among features. Here is the feature importance table and its scientific discussion.",
+            table: {
+                feature: "Feature / Variable",
+                score: "Importance Score",
+                description: "Description",
+                luasPanenDesc: "Total harvested area of rice fields (Hectares)",
+                curahHujanDesc: "Average annual rainfall (mm/year)",
+                kelembapanDesc: "Average relative humidity (%)",
+                suhuDesc: "Average daily air temperature (°C)",
+                tahunDesc: "Historical year index (Time)"
+            },
+            dominanTitle: "Why is Harvested Area Most Dominant?",
+            dominanDesc: "Scientifically, <strong>Harvested Area</strong> has a very strong linear correlation (often r > 0.95) with total production. This physical-mathematical relationship is based on the fundamental agricultural formula: <em>Production = Harvested Area × Yield (Productivity)</em>. The variation in harvested area across regions (provinces/regencies) is massive (spatial scale), dominating the variance of the target data. While climate factors like temperature and rainfall affect productivity per hectare (causing minor fluctuations), the physical size of the 'biological factory' (land area) dictates the absolute production capacity.",
+            tahunTitle: "Why is the Impact of Year Very Small?",
+            tahunDesc: "The <strong>Year</strong> variable acts as a linear temporal index and does not represent any real biophysical process in crop growth. Rice crops grow based on photosynthesis driven by water, solar radiation, and soil nutrients, not by the passage of calendar years. Furthermore, agricultural technology advancements (improved seeds, irrigation, fertilizers) occur gradually and non-linearly, with their impacts already implicitly reflected in harvested area and yield trends. Tree-based algorithms (like Random Forest) also tend to ignore monotonic trend variables when physically correlated features (harvested area) are already present.",
+            discussionTitle: "Scientific Discussion & Conclusion",
+            discussionContent: "Agronomic studies confirm that expanding the harvested area (extensification) is the main driver of production volume in developing nations. Climate factors (rainfall, temperature) act as limiting factors that trigger crop failures or minor fluctuations in yield, but do not alter the overall production magnitude as much as land area changes do. Consequently, machine learning models logically place Harvested Area at the highest importance (~88.5%) and position Year merely as a temporal helper feature with minimal contribution (~0.8%)."
+        },
         typewriter: [
             "Salman Yuris!",
             "Software Quality Assurance!",
@@ -273,7 +319,9 @@ const translations = {
             project5Title: "تحليل المشاعر",
             project5Desc: "تحليل المشاعر العامة حول تكاليف التعليم باستخدام تقنيات معالجة اللغة الطبيعية (NLP).",
             project6Title: "نظام تقارير الإنتاج لشركة PT. DSI",
-            project6Desc: "نظام معلومات قائم على الويب لمراقبة وتسجيل وتقديم تقارير عن مخرجات الإنتاج اليومية في شركة PT. DSI في الوقت الفعلي."
+            project6Desc: "نظام معلومات قائم على الويب لمراقبة وتسجيل وتقديم تقارير عن مخرجات الإنتاج اليومية في شركة PT. DSI في الوقت الفعلي.",
+            project7Title: "التنبؤ بإنتاج الأرز",
+            project7Desc: "تحليل أهمية الميزات وتقدير إنتاج الأرز باستخدام خوارزميات تعلم الآلة."
         },
         education: {
             title: "التعليم",
@@ -345,6 +393,27 @@ const translations = {
         footer: {
             rights: "جميع الحقوق محفوظة."
         },
+        riceAnalysis: {
+            title: "دراسة حالة: تحليل أهمية الميزات",
+            subtitle: "لماذا تعد المساحة المحصودة المحدد الرئيسي في التنبؤ بإنتاج الأرز؟",
+            intro: "في نمذجة تعلم الآلة (مثل Random Forest أو XGBoost) للتنبؤ بإنتاج الأرز في إندونيسيا، يكشف تحليل مساهمة المتغيرات (أهمية الميزات) عن اختلاف صارخ في الأهمية بين الميزات. فيما يلي جدول أهمية الميزات والمناقشة العلمية الخاصة به.",
+            table: {
+                feature: "الميزة / المتغير",
+                score: "درجة الأهمية",
+                description: "الوصف",
+                luasPanenDesc: "إجمالي المساحة المحصودة لحقول الأرز (بالهكتار)",
+                curahHujanDesc: "متوسط هطول الأمطار السنوي (ملم/سنة)",
+                kelembapanDesc: "متوسط الرطوبة النسبية (%)",
+                suhuDesc: "متوسط درجة حرارة الهواء اليومية (درجة مئوية)",
+                tahunDesc: "مؤشر السنة التاريخية (الزمن)"
+            },
+            dominanTitle: "لماذا تعد المساحة المحصودة الأكثر هيمنة؟",
+            dominanDesc: "علمياً، تمتلك <strong>المساحة المحصودة</strong> ارتباطاً خطياً قوياً جداً (غالباً r > 0.95) مع إجمالي الإنتاج. تعتمد هذه العلاقة الفيزيائية والرياضية على المعادلة الزراعية الأساسية: <em>الإنتاج = المساحة المحصودة × الإنتاجية (Yield)</em>. التباين في المساحة المحصودة بين المناطق (المحافظات) هائل، مما يهيمن على تباين البيانات المستهدفة. في حين أن العوامل المناخية مثل الحرارة والأمطار تؤثر على الإنتاجية لكل هكتار (مما يسبب تقلبات طفيفة)، فإن الحجم المادي لـ 'المصنع البيولوجي' (مساحة الأرض) يملي القدرة الإنتاجية المطلقة.",
+            tahunTitle: "لماذا يعد تأثير السنة صغيراً جداً؟",
+            tahunDesc: "يعمل متغير <strong>السنة</strong> كمؤشر زمني خطي ولا يمثل أي عملية فيزيائية حيوية حقيقية في نمو المحاصيل. تنمو محاصيل الأرز بناءً على عملية التمثيل الضوئي التي تحركها المياه والإشعاع الشمسي ومغذيات التربة، وليس بمرور السنوات التقويمية. علاوة على ذلك، تحدث التطورات التكنولوجية الزراعية (البذور المحسنة، الري، الأسمدة) بشكل تدريجي وغير خطي، وينعكس تأثيرها بالفعل بشكل ضمني في اتجاهات المساحة المحصودة والإنتاجية. تميل الخوارزميات القائمة على الأشجار (مثل Random Forest) أيضاً إلى تجاهل متغيرات الاتجاه الرتيب عندما تكون الميزات المرتبطة فيزيائياً (المساحة المحصودة) متوفرة بالفعل.",
+            discussionTitle: "المناقشة العلمية والخلاصة",
+            discussionContent: "تؤكد الدراسات الزراعية أن توسيع المساحة المحصودة هو المحرك الرئيسي لحجم الإنتاج في الدول النامية. تعمل العوامل المناخية (الأمطار، درجة الحرارة) كعوامل مقيدة تؤدي إلى فشل المحاصيل أو تقلبات طفيفة في الإنتاجية، لكنها لا تغير حجم الإنتاج الإجمالي بنفس قدر التغيرات في مساحة الأرض. وبالتالي، تضع نماذج تعلم الآلة منطقياً المساحة المحصودة في أعلى درجات الأهمية (~88.5%) وتضع السنة مجرد ميزة مساعدة زمنية بمساهمة ضئيلة (~0.8%)."
+        },
         typewriter: [
             "سلمان يوريس!",
             "ضمان جودة البرمجيات!",
@@ -392,7 +461,9 @@ const translations = {
             project5Title: "感情分析",
             project5Desc: "NLP技術を使用して教育費に関するパブリックセンチメントを分析。",
             project6Title: "PT. DSI 生産報告システム",
-            project6Desc: "PT. DSIにおける日々の生産実績をリアルタイムで監視、記録、および報告するためのWebベースの情報システム。"
+            project6Desc: "PT. DSIにおける日々の生産実績をリアルタイムで監視、記録、および報告するためのWebベースの情報システム。",
+            project7Title: "米の生産量予測",
+            project7Desc: "機械学習アルゴリズムを用いた、特徴量の重要度分析と米の生産量予測。"
         },
         education: {
             title: "学歴",
@@ -463,6 +534,27 @@ const translations = {
         },
         footer: {
             rights: "All rights reserved."
+        },
+        riceAnalysis: {
+            title: "ケーススタディ：特徴量の重要度分析",
+            subtitle: "なぜ収穫面積が米の生産量予測において最も支配的な要因なのか？",
+            intro: "インドネシアの米生産量を予測するための機械学習モデリング（Random ForestやXGBoostなど）において、特徴量の重要度（Feature Importance）分析は、各変数の影響力に顕著な差があることを示しています。以下は特徴量の重要度テーブルと、その科学的な考察です。",
+            table: {
+                feature: "特徴量 / 変数",
+                score: "重要度スコア",
+                description: "説明",
+                luasPanenDesc: "水田の総収穫面積（ヘクタール）",
+                curahHujanDesc: "年間平均降水量（mm/年）",
+                kelembapanDesc: "平均相対湿度（%）",
+                suhuDesc: "日平均気温（°C）",
+                tahunDesc: "過去の年インデックス（時間）"
+            },
+            dominanTitle: "なぜ収穫面積が最も支配的なのか？",
+            dominanDesc: "科学的に、<strong>収穫面積</strong>は総生産量と非常に強い線形相関（多くの場合 r > 0.95）を持っています。この物理的・数学的な関係は、農業の基本概念である <em>生産量 ＝ 収穫面積 × 反収（生産性）</em> に基づいています。地域（州や県）ごとの収穫面積の差は非常に大きく（空間スケール）、ターゲットデータの分散の大部分を占めます。気温や降水量などの気候要因は1ヘクタールあたりの生産性（小規模な変動）に影響を与えますが、「生物学的工場」としての物理的規模（土地面積）が絶対的な生産能力を決定します。",
+            tahunTitle: "なぜ年の影響が極めて小さいのか？",
+            tahunDesc: "<strong>年</strong>という変数は単なる線形時間インデックスであり、作物の成長における実際の生物物理学的プロセスを表していません。稲はカレンダーの年が経過することではなく、水、太陽放射、および土壌栄養素によって駆動される光合成に基づいて成長します。また、農業技術の進歩（優良品種の導入、灌漑、肥料）は段階的かつ非線形に進行し、その影響はすでに収穫面積や反収の傾向に間接的に反映されています。決定木ベースのアルゴリズム（Random Forestなど）は、物理的に強く関連する特徴量（収穫面積）が既に存在する場合、単調増加する時間変数を無視する傾向があります。",
+            discussionTitle: "科学的考察と結論",
+            discussionContent: "農業経済学の研究では、発展途上国において収穫面積の拡大（外延的開発）が生産量最大化の主要因であることが裏付けられています。気候要因（降水量、気温）は作物の不作や反収の軽微な変動を引き起こす阻害要因（制限要因）として機能しますが、土地面積の変化ほど生産量全体の規模を大きく変えるものではありません。そのため、機械学習モデルは論理的に収穫面積に最大の重要度（約88.5%）を割り当て、年はわずかな貢献度（約0.8%）の一時的な補助特徴量として位置づけています。"
         },
         typewriter: [
             "サルマン・ユリス!",
