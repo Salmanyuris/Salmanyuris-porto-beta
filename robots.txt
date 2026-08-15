@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://salmanyuris.github.io/Salmanyuris-porto-beta/sitemap.xml
