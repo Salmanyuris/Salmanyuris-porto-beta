@@ -18,7 +18,7 @@ document.addEventListener('DOMContentLoaded', function () {
     if (todoForm && todoInput && todoList) {
         let tasks = JSON.parse(localStorage.getItem('tasks')) || [];
         function renderTasks() {
-            todoList.innerHTML = ''; 
+            todoList.innerHTML = '';
             tasks.forEach((task, index) => {
                 const li = document.createElement('li');
                 li.className = 'list-group-item d-flex justify-content-between align-items-center animate__animated animate__fadeIn';
@@ -54,7 +54,7 @@ document.addEventListener('DOMContentLoaded', function () {
             ? window.translations[window.currentLang || 'id'].typewriter
             : [
                 "Salman Yuris!",
-                "Software Quality Assurance!",
+                "IT Quality Assurance!",
                 "Web Developer!",
                 "Cloud Computing Engineer!",
                 "UI/UX Designer!",
@@ -93,7 +93,7 @@ document.addEventListener('DOMContentLoaded', function () {
             }
         }
 
-        window.resetTypewriter = function(newTexts) {
+        window.resetTypewriter = function (newTexts) {
             clearTimeout(typewriterTimeout);
             texts = newTexts;
             count = 0;
@@ -185,7 +185,7 @@ document.addEventListener('DOMContentLoaded', function () {
 // --- Multi-Language i18n System ---
 window.currentLang = localStorage.getItem("lang") || "id";
 
-window.t = function(key) {
+window.t = function (key) {
     if (!window.translations || !window.translations[window.currentLang]) return key;
     const keys = key.split('.');
     let val = window.translations[window.currentLang];
@@ -199,19 +199,19 @@ window.t = function(key) {
     return val;
 };
 
-window.changeLanguage = function(lang) {
+window.changeLanguage = function (lang) {
     window.currentLang = lang;
     localStorage.setItem("lang", lang);
     window.updateTranslations();
-    
+
     // Close dropdown
     const dropdownFloating = document.getElementById("lang-dropdown-floating");
     if (dropdownFloating) dropdownFloating.classList.add("hidden");
 };
 
-window.updateTranslations = function() {
+window.updateTranslations = function () {
     const lang = window.currentLang;
-    
+
     // Update HTML attributes
     document.documentElement.lang = lang;
     document.documentElement.dir = (lang === 'ar') ? 'rtl' : 'ltr';

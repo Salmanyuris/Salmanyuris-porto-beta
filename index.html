@@ -163,10 +163,13 @@
 			<ul id="menu"
 				class="hidden md:flex items-center justify-center space-x-8 text-slate-700 dark:text-slate-300 font-medium">
 				<li><a class="hover:text-primary transition" href="#home" data-i18n="nav.home">Home</a></li>
-				<li><a class="hover:text-primary transition" href="#portfolio" data-i18n="nav.portfolio">Portfolio</a></li>
-				<li><a class="hover:text-primary transition" href="#education" data-i18n="nav.education">Education</a></li>
+				<li><a class="hover:text-primary transition" href="#portfolio" data-i18n="nav.portfolio">Portfolio</a>
+				</li>
+				<li><a class="hover:text-primary transition" href="#education" data-i18n="nav.education">Education</a>
+				</li>
 				<li><a class="hover:text-primary transition" href="#skill" data-i18n="nav.skill">Skill</a></li>
-				<li><a class="hover:text-primary transition" href="#experience" data-i18n="nav.experience">Experience</a></li>
+				<li><a class="hover:text-primary transition" href="#experience"
+						data-i18n="nav.experience">Experience</a></li>
 				<li><a class="hover:text-primary transition" href="#contact" data-i18n="nav.contact">Contact</a></li>
 				<li>
 					<button id="theme-toggle-desktop"
@@ -191,22 +194,25 @@
 	<!-- Home Section -->
 	<div class="relative z-10 min-h-screen flex items-center justify-center overflow-hidden bg-texture-dots">
 		<section class="p-8 flex flex-col" id="home" data-aos="fade-up" data-aos-duration="1000">
-			<div class="max-w-4xl mx-auto flex flex-col md:flex-row items-center gap-12">
-				<div class="md:w-2/3 p-4">
-					<h1
-						class="text-[3.75rem] leading-[1.05] tracking-[-1.5px] font-semibold text-slate-900 dark:text-white"
+			<div class="max-w-4xl mx-auto flex flex-col-reverse md:flex-row items-center gap-12">
+				<div class="w-full md:w-2/3 p-4 flex flex-col items-center md:items-start text-center md:text-left">
+					<h1 class="text-4xl md:text-[3.75rem] leading-tight md:leading-[1.05] tracking-tight md:tracking-[-1.5px] font-semibold text-slate-900 dark:text-white"
 						data-i18n="hero.hello">
 						Hello,</h1>
 					<h2
-						class="text-[3.75rem] leading-[1.05] tracking-[-1.5px] font-semibold text-slate-900 dark:text-white">
+						class="text-4xl md:text-[3.75rem] leading-tight md:leading-[1.05] tracking-tight md:tracking-[-1.5px] font-semibold text-slate-900 dark:text-white mt-2 md:mt-0">
 						I’m <span class="bg-gradient-to-r from-primary to-secondary text-gradient"
 							id="typewriter"></span>
 					</h2>
-					<p class="mt-6 text-slate-600 dark:text-slate-400 text-[1.13rem] leading-[1.38]" data-aos="fade-up"
-						data-aos-delay="200" data-i18n="hero.welcome">
-						Welcome to my portfolio! As a Junior Software Quality Assurance professional, I am dedicated to ensuring the reliability, stability, and optimal performance of digital systems. Supported by complementary expertise in Cloud Computing, Data Analysis, Web Development, and UI/UX Design, I integrate technical precision, creativity, and rigorous quality standards to deliver high-impact technological solutions. Let's collaborate to build extraordinary digital innovations!
+					<p class="mt-6 text-slate-600 dark:text-slate-400 text-base md:text-[1.13rem] leading-relaxed md:leading-[1.38] max-w-2xl"
+						data-aos="fade-up" data-aos-delay="200" data-i18n="hero.welcome">
+						Sebagai IT Quality Assurance, saya berfokus pada memastikan kualitas, keandalan, dan
+						stabilitas produk digital. Dengan pengalaman di bidang Cloud Computing, Analisis Data, Web
+						Development, dan UI/UX, saya menggabungkan ketelitian teknis dan pemahaman teknologi untuk
+						menghadirkan solusi digital yang berkualitas dan berdampak.
 					</p>
-					<div class="flex space-x-4 mt-8" data-aos="fade-up" data-aos-delay="400">
+					<div class="flex space-x-4 mt-8 justify-center md:justify-start w-full" data-aos="fade-up"
+						data-aos-delay="400">
 						<button
 							class="bg-gradient-to-r from-primary to-secondary text-white rounded-full px-8 py-3 hover:scale-105 hover:shadow-[0_0_20px_rgba(56,189,248,0.4)] transition-all outline-none font-medium"
 							data-i18n="hero.email">
@@ -218,8 +224,8 @@
 							Download CV
 						</button>
 					</div>
-					<div class="flex items-center space-x-6 mt-10 text-slate-600 dark:text-slate-400" data-aos="fade-up"
-						data-aos-delay="600">
+					<div class="flex items-center space-x-6 mt-10 text-slate-600 dark:text-slate-400 justify-center md:justify-start w-full"
+						data-aos="fade-up" data-aos-delay="600">
 						<a href="https://github.com/salmanyuris" target="_blank"
 							class="hover:scale-125 hover:text-primary transition-all duration-300"><i
 								class="fab fa-github text-2xl"></i></a>
@@ -239,8 +245,8 @@
 				</div>
 
 				<!-- Profile Image -->
-				<div class="hidden md:block relative w-64 h-64 md:w-80 md:h-80 mx-auto md:mx-0 animate-float"
-					data-aos="zoom-in" data-aos-duration="1200">
+				<div class="block relative w-48 h-48 md:w-80 md:h-80 mx-auto md:mx-0 animate-float" data-aos="zoom-in"
+					data-aos-duration="1200">
 					<!-- Soft glow behind image -->
 					<div class="absolute inset-0 bg-primary/30 rounded-full blur-[60px] opacity-70"></div>
 					<img src="img/pp.png" alt="Profile Image"
@@ -255,10 +261,12 @@
 	<section id="portfolio" class="bg-texture-grid py-24 px-4 relative z-10" style="border-top: none;">
 		<div class="max-w-6xl mx-auto">
 			<div class="text-center mb-16" data-aos="fade-up">
-				<h1 class="text-[3rem] tracking-[-1.2px] font-semibold text-slate-900 dark:text-white" data-i18n="portfolio.title">
+				<h1 class="text-[3rem] tracking-[-1.2px] font-semibold text-slate-900 dark:text-white"
+					data-i18n="portfolio.title">
 					My Portfolio
 				</h1>
-				<p class="mt-4 text-slate-600 dark:text-slate-400 text-[1.13rem] max-w-2xl mx-auto" data-i18n="portfolio.subtitle">
+				<p class="mt-4 text-slate-600 dark:text-slate-400 text-[1.13rem] max-w-2xl mx-auto"
+					data-i18n="portfolio.subtitle">
 					A curated collection of my best work in technology, design, and data science, meticulously crafted
 					for real-world impact.
 				</p>
@@ -383,7 +391,8 @@
 	<section class="py-24 px-4 bg-texture-dots relative z-10" style="border-top: none;" id="education">
 		<div class="max-w-4xl mx-auto">
 			<div class="text-center mb-16" data-aos="fade-up">
-				<h1 class="text-[3rem] tracking-[-1.2px] font-semibold text-slate-900 dark:text-white" data-i18n="education.title">
+				<h1 class="text-[3rem] tracking-[-1.2px] font-semibold text-slate-900 dark:text-white"
+					data-i18n="education.title">
 					Education
 				</h1>
 			</div>
@@ -401,10 +410,12 @@
 							class="text-xl font-medium text-slate-900 dark:text-white group-hover:text-primary transition-colors">
 							Dian Nuswantoro University
 						</h2>
-						<p class="text-slate-700 dark:text-slate-300 opacity-80 text-sm mt-1 font-medium" data-i18n="education.card1Degree">
+						<p class="text-slate-700 dark:text-slate-300 opacity-80 text-sm mt-1 font-medium"
+							data-i18n="education.card1Degree">
 							Bachelor of Information Systems (2021 – 2025)
 						</p>
-						<p class="text-slate-600 dark:text-slate-400 text-sm mt-3 leading-relaxed" data-i18n="education.card1Desc">
+						<p class="text-slate-600 dark:text-slate-400 text-sm mt-3 leading-relaxed"
+							data-i18n="education.card1Desc">
 							Focused on web programming, data analysis, and cloud computing using modern technologies.
 						</p>
 					</div>
@@ -422,10 +433,12 @@
 							class="text-xl font-medium text-slate-900 dark:text-white group-hover:text-primary transition-colors">
 							Gadjah Mada University
 						</h2>
-						<p class="text-slate-700 dark:text-slate-300 opacity-80 text-sm mt-1 font-medium" data-i18n="education.card2Degree">
+						<p class="text-slate-700 dark:text-slate-300 opacity-80 text-sm mt-1 font-medium"
+							data-i18n="education.card2Degree">
 							Student Exchange, Computer Science (2023 – 2024)
 						</p>
-						<p class="text-slate-600 dark:text-slate-400 text-sm mt-3 leading-relaxed" data-i18n="education.card2Desc">
+						<p class="text-slate-600 dark:text-slate-400 text-sm mt-3 leading-relaxed"
+							data-i18n="education.card2Desc">
 							Studied programming, software engineering, Machine Learning, and UI/UX Design.
 						</p>
 					</div>
@@ -442,10 +455,12 @@
 						<h2
 							class="text-xl font-medium text-slate-900 dark:text-white group-hover:text-primary transition-colors">
 							SMAN 1 Balapulang</h2>
-						<p class="text-slate-700 dark:text-slate-300 opacity-80 text-sm mt-1 font-medium" data-i18n="education.card3Degree">
+						<p class="text-slate-700 dark:text-slate-300 opacity-80 text-sm mt-1 font-medium"
+							data-i18n="education.card3Degree">
 							Social Science (2018 – 2021)
 						</p>
-						<p class="text-slate-600 dark:text-slate-400 text-sm mt-3 leading-relaxed" data-i18n="education.card3Desc">
+						<p class="text-slate-600 dark:text-slate-400 text-sm mt-3 leading-relaxed"
+							data-i18n="education.card3Desc">
 							Studied basic digital literacy including Microsoft Office and Google Suite.
 						</p>
 					</div>
@@ -463,10 +478,12 @@
 							class="text-xl font-medium text-slate-900 dark:text-white group-hover:text-primary transition-colors">
 							Bangkit Academy
 						</h2>
-						<p class="text-slate-700 dark:text-slate-300 opacity-80 text-sm mt-1 font-medium" data-i18n="education.card4Degree">
+						<p class="text-slate-700 dark:text-slate-300 opacity-80 text-sm mt-1 font-medium"
+							data-i18n="education.card4Degree">
 							Cloud Computing (2024 – 2025)
 						</p>
-						<p class="text-slate-600 dark:text-slate-400 text-sm mt-3 leading-relaxed" data-i18n="education.card4Desc">
+						<p class="text-slate-600 dark:text-slate-400 text-sm mt-3 leading-relaxed"
+							data-i18n="education.card4Desc">
 							Led by Google, Goto, Tokopedia. Studied Networking, Backend Engineering, and GCP.
 						</p>
 					</div>
@@ -481,10 +498,12 @@
 	<section class="bg-texture-grid py-24 px-4 relative z-10" style="border-top: none;" id="skill">
 		<div class="max-w-5xl mx-auto">
 			<div class="text-center mb-20" data-aos="fade-up">
-				<h1 class="text-[3rem] tracking-[-1.2px] font-semibold text-slate-900 dark:text-white" data-i18n="skills.title">
+				<h1 class="text-[3rem] tracking-[-1.2px] font-semibold text-slate-900 dark:text-white"
+					data-i18n="skills.title">
 					Technical Arsenal
 				</h1>
-				<p class="mt-4 text-slate-600 dark:text-slate-400 text-[1.13rem] max-w-2xl mx-auto" data-i18n="skills.subtitle">
+				<p class="mt-4 text-slate-600 dark:text-slate-400 text-[1.13rem] max-w-2xl mx-auto"
+					data-i18n="skills.subtitle">
 					The tools and technologies I use to bring ideas to life.
 				</p>
 			</div>
@@ -532,27 +551,33 @@
 				<div class="flex flex-wrap gap-4">
 					<div class="bg-white/60 dark:bg-white/5 backdrop-blur-md border border-black/5 dark:border-white/10 rounded-full px-8 py-3 text-center text-slate-700 dark:text-slate-300 cursor-default hover:bg-black/5 dark:hover:bg-white/10 transition-colors"
 						data-aos="fade-up" data-aos-delay="0">
-						<span class="text-sm font-semibold tracking-wide" data-i18n="skills.softSkillsItems.projectManagement">Project Management</span>
+						<span class="text-sm font-semibold tracking-wide"
+							data-i18n="skills.softSkillsItems.projectManagement">Project Management</span>
 					</div>
 					<div class="bg-white/60 dark:bg-white/5 backdrop-blur-md border border-black/5 dark:border-white/10 rounded-full px-8 py-3 text-center text-slate-700 dark:text-slate-300 cursor-default hover:bg-black/5 dark:hover:bg-white/10 transition-colors"
 						data-aos="fade-up" data-aos-delay="100">
-						<span class="text-sm font-semibold tracking-wide" data-i18n="skills.softSkillsItems.problemSolving">Problem Solving</span>
+						<span class="text-sm font-semibold tracking-wide"
+							data-i18n="skills.softSkillsItems.problemSolving">Problem Solving</span>
 					</div>
 					<div class="bg-white/60 dark:bg-white/5 backdrop-blur-md border border-black/5 dark:border-white/10 rounded-full px-8 py-3 text-center text-slate-700 dark:text-slate-300 cursor-default hover:bg-black/5 dark:hover:bg-white/10 transition-colors"
 						data-aos="fade-up" data-aos-delay="200">
-						<span class="text-sm font-semibold tracking-wide" data-i18n="skills.softSkillsItems.adaptability">Adaptability</span>
+						<span class="text-sm font-semibold tracking-wide"
+							data-i18n="skills.softSkillsItems.adaptability">Adaptability</span>
 					</div>
 					<div class="bg-white/60 dark:bg-white/5 backdrop-blur-md border border-black/5 dark:border-white/10 rounded-full px-8 py-3 text-center text-slate-700 dark:text-slate-300 cursor-default hover:bg-black/5 dark:hover:bg-white/10 transition-colors"
 						data-aos="fade-up" data-aos-delay="300">
-						<span class="text-sm font-semibold tracking-wide" data-i18n="skills.softSkillsItems.timeManagement">Time Management</span>
+						<span class="text-sm font-semibold tracking-wide"
+							data-i18n="skills.softSkillsItems.timeManagement">Time Management</span>
 					</div>
 					<div class="bg-white/60 dark:bg-white/5 backdrop-blur-md border border-black/5 dark:border-white/10 rounded-full px-8 py-3 text-center text-slate-700 dark:text-slate-300 cursor-default hover:bg-black/5 dark:hover:bg-white/10 transition-colors"
 						data-aos="fade-up" data-aos-delay="400">
-						<span class="text-sm font-semibold tracking-wide" data-i18n="skills.softSkillsItems.teamWork">Team Work</span>
+						<span class="text-sm font-semibold tracking-wide"
+							data-i18n="skills.softSkillsItems.teamWork">Team Work</span>
 					</div>
 					<div class="bg-white/60 dark:bg-white/5 backdrop-blur-md border border-black/5 dark:border-white/10 rounded-full px-8 py-3 text-center text-slate-700 dark:text-slate-300 cursor-default hover:bg-black/5 dark:hover:bg-white/10 transition-colors"
 						data-aos="fade-up" data-aos-delay="500">
-						<span class="text-sm font-semibold tracking-wide" data-i18n="skills.softSkillsItems.criticalThinking">Critical Thinking</span>
+						<span class="text-sm font-semibold tracking-wide"
+							data-i18n="skills.softSkillsItems.criticalThinking">Critical Thinking</span>
 					</div>
 				</div>
 			</div>
@@ -565,7 +590,8 @@
 	<section class="bg-texture-dots py-24 px-4 relative z-10" style="border-top: none;" id="experience">
 		<div class="max-w-5xl mx-auto">
 			<div class="text-center mb-20" data-aos="fade-up">
-				<h1 class="text-[3rem] tracking-[-1.2px] font-semibold text-slate-900 dark:text-white" data-i18n="experience.title">
+				<h1 class="text-[3rem] tracking-[-1.2px] font-semibold text-slate-900 dark:text-white"
+					data-i18n="experience.title">
 					Experience Journey
 				</h1>
 			</div>
@@ -585,12 +611,17 @@
 					</div>
 					<div class="order-1 bg-white/60 dark:bg-white/5 backdrop-blur-md border border-black/5 dark:border-white/10 rounded-2xl w-full md:w-5/12 p-8 transition-all duration-500 hover:shadow-[0_10px_30px_rgba(56,189,248,0.15)] hover:border-primary/50 hover:-translate-y-2 relative"
 						data-aos="fade-right">
-						<p class="text-xs font-semibold text-primary tracking-widest uppercase mb-3" data-i18n="experience.qaDate">Jun 2026 - Sekarang
+						<p class="text-xs font-semibold text-primary tracking-widest uppercase mb-3"
+							data-i18n="experience.qaDate">Jun 2026 - Sekarang
 						</p>
-						<h3 class="font-semibold text-slate-900 dark:text-white text-2xl mb-1" data-i18n="experience.qaTitle">Software Quality Assurance Junior</h3>
-						<p class="text-sm text-slate-700 dark:text-slate-300 font-medium opacity-80 mb-5" data-i18n="experience.qaCompany">PT. Mitra Integrasi Informatika (site: BNI Persero)</p>
-						<p class="text-sm text-slate-600 dark:text-slate-400 leading-relaxed" data-i18n="experience.qaDesc">
-							Membuat Test Scenario, melakukan testing aplikasi (web/mobile), mengidentifikasi bug, serta memastikan kualitas sistem berjalan dengan baik untuk deployment di site BNI Persero.
+						<h3 class="font-semibold text-slate-900 dark:text-white text-2xl mb-1"
+							data-i18n="experience.qaTitle">Software Quality Assurance Junior</h3>
+						<p class="text-sm text-slate-700 dark:text-slate-300 font-medium opacity-80 mb-5"
+							data-i18n="experience.qaCompany">PT. Mitra Integrasi Informatika (site: BNI Persero)</p>
+						<p class="text-sm text-slate-600 dark:text-slate-400 leading-relaxed"
+							data-i18n="experience.qaDesc">
+							Membuat Test Scenario, melakukan testing aplikasi (web/mobile), mengidentifikasi bug, serta
+							memastikan kualitas sistem berjalan dengan baik untuk deployment di site BNI Persero.
 						</p>
 					</div>
 				</div>
@@ -604,11 +635,15 @@
 					</div>
 					<div class="order-1 bg-white/60 dark:bg-white/5 backdrop-blur-md border border-black/5 dark:border-white/10 rounded-2xl w-full md:w-5/12 p-8 transition-all duration-500 hover:shadow-[0_10px_30px_rgba(56,189,248,0.15)] hover:border-primary/50 hover:-translate-y-2 relative"
 						data-aos="fade-left">
-						<p class="text-xs font-semibold text-primary tracking-widest uppercase mb-3" data-i18n="experience.webDate">Jan 2024 - Mar 2024
+						<p class="text-xs font-semibold text-primary tracking-widest uppercase mb-3"
+							data-i18n="experience.webDate">Jan 2024 - Mar 2024
 						</p>
-						<h3 class="font-semibold text-slate-900 dark:text-white text-2xl mb-1" data-i18n="experience.webTitle">Web Developer Intern</h3>
-						<p class="text-sm text-slate-700 dark:text-slate-300 font-medium opacity-80 mb-5" data-i18n="experience.webCompany">Dinas Komunikasi dan Informatika kab. Tegal</p>
-						<p class="text-sm text-slate-600 dark:text-slate-400 leading-relaxed" data-i18n="experience.webDesc">
+						<h3 class="font-semibold text-slate-900 dark:text-white text-2xl mb-1"
+							data-i18n="experience.webTitle">Web Developer Intern</h3>
+						<p class="text-sm text-slate-700 dark:text-slate-300 font-medium opacity-80 mb-5"
+							data-i18n="experience.webCompany">Dinas Komunikasi dan Informatika kab. Tegal</p>
+						<p class="text-sm text-slate-600 dark:text-slate-400 leading-relaxed"
+							data-i18n="experience.webDesc">
 							Mengembangkan Website pendaftaran magang dengan Laravel, menyediakan fitur formulir digital,
 							validasi data, manajemen akun, dashboard admin, dan penyimpanan dokumen.
 						</p>
@@ -624,11 +659,15 @@
 					</div>
 					<div class="order-1 bg-white/60 dark:bg-white/5 backdrop-blur-md border border-black/5 dark:border-white/10 rounded-2xl w-full md:w-5/12 p-8 transition-all duration-500 hover:shadow-[0_10px_30px_rgba(56,189,248,0.15)] hover:border-primary/50 hover:-translate-y-2 relative"
 						data-aos="fade-right">
-						<p class="text-xs font-semibold text-primary tracking-widest uppercase mb-3" data-i18n="experience.labDate">Jul 2024 - Aug 2024
+						<p class="text-xs font-semibold text-primary tracking-widest uppercase mb-3"
+							data-i18n="experience.labDate">Jul 2024 - Aug 2024
 						</p>
-						<h3 class="font-semibold text-slate-900 dark:text-white text-2xl mb-1" data-i18n="experience.labTitle">Laboratory Assistant</h3>
-						<p class="text-sm text-slate-700 dark:text-slate-300 font-medium opacity-80 mb-5" data-i18n="experience.labCompany">Universitas Dian Nuswantoro</p>
-						<p class="text-sm text-slate-600 dark:text-slate-400 leading-relaxed" data-i18n="experience.labDesc">
+						<h3 class="font-semibold text-slate-900 dark:text-white text-2xl mb-1"
+							data-i18n="experience.labTitle">Laboratory Assistant</h3>
+						<p class="text-sm text-slate-700 dark:text-slate-300 font-medium opacity-80 mb-5"
+							data-i18n="experience.labCompany">Universitas Dian Nuswantoro</p>
+						<p class="text-sm text-slate-600 dark:text-slate-400 leading-relaxed"
+							data-i18n="experience.labDesc">
 							Membantu dosen dalam pelaksanaan praktikum, memastikan tugas praktikum sesuai prosedur,
 							mengevaluasi, dan memberikan umpan balik kepada mahasiswa.
 						</p>
@@ -644,12 +683,16 @@
 					</div>
 					<div class="order-1 bg-white/60 dark:bg-white/5 backdrop-blur-md border border-black/5 dark:border-white/10 rounded-2xl w-full md:w-5/12 p-8 transition-all duration-500 hover:shadow-[0_10px_30px_rgba(56,189,248,0.15)] hover:border-primary/50 hover:-translate-y-2 relative"
 						data-aos="fade-left">
-						<p class="text-xs font-semibold text-primary tracking-widest uppercase mb-3" data-i18n="experience.shopeeDate">Jun 2023 - Jan 2025
+						<p class="text-xs font-semibold text-primary tracking-widest uppercase mb-3"
+							data-i18n="experience.shopeeDate">Jun 2023 - Jan 2025
 						</p>
-						<h3 class="font-semibold text-slate-900 dark:text-white text-2xl mb-1" data-i18n="experience.shopeeTitle">Mitra ShopeeFood Driver
+						<h3 class="font-semibold text-slate-900 dark:text-white text-2xl mb-1"
+							data-i18n="experience.shopeeTitle">Mitra ShopeeFood Driver
 						</h3>
-						<p class="text-sm text-slate-700 dark:text-slate-300 font-medium opacity-80 mb-5" data-i18n="experience.shopeeCompany">PT. Shopee Internasional Indonesia</p>
-						<p class="text-sm text-slate-600 dark:text-slate-400 leading-relaxed" data-i18n="experience.shopeeDesc">
+						<p class="text-sm text-slate-700 dark:text-slate-300 font-medium opacity-80 mb-5"
+							data-i18n="experience.shopeeCompany">PT. Shopee Internasional Indonesia</p>
+						<p class="text-sm text-slate-600 dark:text-slate-400 leading-relaxed"
+							data-i18n="experience.shopeeDesc">
 							Mengantarkan pesanan makanan, mencatat transaksi dengan akurat, menjaga komunikasi dengan
 							pelanggan, memastikan kepuasan selama proses pengantaran.
 						</p>
@@ -665,11 +708,15 @@
 					</div>
 					<div class="order-1 bg-white/60 dark:bg-white/5 backdrop-blur-md border border-black/5 dark:border-white/10 rounded-2xl w-full md:w-5/12 p-8 transition-all duration-500 hover:shadow-[0_10px_30px_rgba(56,189,248,0.15)] hover:border-primary/50 hover:-translate-y-2 relative"
 						data-aos="fade-right">
-						<p class="text-xs font-semibold text-primary tracking-widest uppercase mb-3" data-i18n="experience.cloudDate">Sep 2024 - Jan 2025
+						<p class="text-xs font-semibold text-primary tracking-widest uppercase mb-3"
+							data-i18n="experience.cloudDate">Sep 2024 - Jan 2025
 						</p>
-						<h3 class="font-semibold text-slate-900 dark:text-white text-2xl mb-1" data-i18n="experience.cloudTitle">Cloud Computing Path</h3>
-						<p class="text-sm text-slate-700 dark:text-slate-300 font-medium opacity-80 mb-5" data-i18n="experience.cloudCompany">Bangkit Academy</p>
-						<p class="text-sm text-slate-600 dark:text-slate-400 leading-relaxed" data-i18n="experience.cloudDesc">
+						<h3 class="font-semibold text-slate-900 dark:text-white text-2xl mb-1"
+							data-i18n="experience.cloudTitle">Cloud Computing Path</h3>
+						<p class="text-sm text-slate-700 dark:text-slate-300 font-medium opacity-80 mb-5"
+							data-i18n="experience.cloudCompany">Bangkit Academy</p>
+						<p class="text-sm text-slate-600 dark:text-slate-400 leading-relaxed"
+							data-i18n="experience.cloudDesc">
 							Mengembangkan API aplikasi SAHASTA dengan Express.js, Prisma, integrasi Google Cloud, serta
 							kontribusi dalam pengembangan UI/UX.
 						</p>
@@ -685,13 +732,17 @@
 					</div>
 					<div class="order-1 bg-white/60 dark:bg-white/5 backdrop-blur-md border border-black/5 dark:border-white/10 rounded-2xl w-full md:w-5/12 p-8 transition-all duration-500 hover:shadow-[0_10px_30px_rgba(56,189,248,0.15)] hover:border-primary/50 hover:-translate-y-2 relative"
 						data-aos="fade-left">
-						<p class="text-xs font-semibold text-primary tracking-widest uppercase mb-3" data-i18n="experience.dnccDate">Agu 2023 - Agu 2024
+						<p class="text-xs font-semibold text-primary tracking-widest uppercase mb-3"
+							data-i18n="experience.dnccDate">Agu 2023 - Agu 2024
 						</p>
-						<h3 class="font-semibold text-slate-900 dark:text-white text-2xl mb-1" data-i18n="experience.dnccTitle">Pengurus Divisi Website
+						<h3 class="font-semibold text-slate-900 dark:text-white text-2xl mb-1"
+							data-i18n="experience.dnccTitle">Pengurus Divisi Website
 						</h3>
-						<p class="text-sm text-slate-700 dark:text-slate-300 font-medium opacity-80 mb-5" data-i18n="experience.dnccCompany">Dian
+						<p class="text-sm text-slate-700 dark:text-slate-300 font-medium opacity-80 mb-5"
+							data-i18n="experience.dnccCompany">Dian
 							Nuswantoro Computer Club</p>
-						<p class="text-sm text-slate-600 dark:text-slate-400 leading-relaxed" data-i18n="experience.dnccDesc">
+						<p class="text-sm text-slate-600 dark:text-slate-400 leading-relaxed"
+							data-i18n="experience.dnccDesc">
 							Berkontribusi dalam pembuatan Web utama DNCC di frontend, pengelolaan materi pelatihan BTNG,
 							dan pengelolaan Channel Youtube DNCC.
 						</p>
@@ -706,10 +757,12 @@
 	<hr class="border-t border-black/10 dark:border-white/10 my-12">
 	<section id="contact" class="bg-texture-grid py-24 px-6 relative" style="border-top: none;">
 		<div class="max-w-4xl mx-auto text-center" data-aos="fade-up">
-			<h2 class="text-[3rem] tracking-[-1.2px] font-semibold text-slate-900 dark:text-white mb-6" data-i18n="contact.title">
+			<h2 class="text-[3rem] tracking-[-1.2px] font-semibold text-slate-900 dark:text-white mb-6"
+				data-i18n="contact.title">
 				Get in Touch
 			</h2>
-			<p class="text-slate-600 dark:text-slate-400 mb-12 max-w-xl mx-auto text-[1.13rem] leading-[1.38]" data-i18n="contact.subtitle">
+			<p class="text-slate-600 dark:text-slate-400 mb-12 max-w-xl mx-auto text-[1.13rem] leading-[1.38]"
+				data-i18n="contact.subtitle">
 				I'm always open to discussing new projects, creative ideas, or opportunities to be part of your vision.
 				Feel free to reach out through any of the platforms below.
 			</p>
@@ -864,15 +917,25 @@
 	<!-- Floating Language Selector -->
 	<div class="fixed bottom-6 end-6 z-50" id="floating-lang-selector">
 		<div class="relative">
-			<button id="lang-btn-floating" class="w-12 h-12 rounded-full bg-white/80 dark:bg-darkCard/80 border border-black/10 dark:border-white/10 backdrop-blur-md text-slate-700 dark:text-slate-300 shadow-xl flex items-center justify-center hover:scale-110 active:scale-95 transition focus:outline-none">
+			<button id="lang-btn-floating"
+				class="w-12 h-12 rounded-full bg-white/80 dark:bg-darkCard/80 border border-black/10 dark:border-white/10 backdrop-blur-md text-slate-700 dark:text-slate-300 shadow-xl flex items-center justify-center hover:scale-110 active:scale-95 transition focus:outline-none">
 				<i class="fas fa-globe text-xl"></i>
 			</button>
 			<!-- Dropdown Menu opens upwards -->
-			<div id="lang-dropdown-floating" class="hidden absolute bottom-full end-0 mb-3 w-36 rounded-2xl bg-white dark:bg-darkCard border border-black/10 dark:border-white/10 shadow-2xl py-1.5 z-50 backdrop-blur-xl">
-				<button onclick="changeLanguage('id')" class="w-full text-left rtl:text-right px-4 py-2.5 text-sm text-slate-700 dark:text-slate-300 hover:bg-slate-100 dark:hover:bg-white/10 flex items-center gap-2">🇮🇩 Bahasa</button>
-				<button onclick="changeLanguage('en')" class="w-full text-left rtl:text-right px-4 py-2.5 text-sm text-slate-700 dark:text-slate-300 hover:bg-slate-100 dark:hover:bg-white/10 flex items-center gap-2">🇺🇸 English</button>
-				<button onclick="changeLanguage('ar')" class="w-full text-left rtl:text-right px-4 py-2.5 text-sm text-slate-700 dark:text-slate-300 hover:bg-slate-100 dark:hover:bg-white/10 flex items-center gap-2">🇸🇦 العربية</button>
-				<button onclick="changeLanguage('ja')" class="w-full text-left rtl:text-right px-4 py-2.5 text-sm text-slate-700 dark:text-slate-300 hover:bg-slate-100 dark:hover:bg-white/10 flex items-center gap-2">🇯🇵 日本語</button>
+			<div id="lang-dropdown-floating"
+				class="hidden absolute bottom-full end-0 mb-3 w-36 rounded-2xl bg-white dark:bg-darkCard border border-black/10 dark:border-white/10 shadow-2xl py-1.5 z-50 backdrop-blur-xl">
+				<button onclick="changeLanguage('id')"
+					class="w-full text-left rtl:text-right px-4 py-2.5 text-sm text-slate-700 dark:text-slate-300 hover:bg-slate-100 dark:hover:bg-white/10 flex items-center gap-2">🇮🇩
+					Bahasa</button>
+				<button onclick="changeLanguage('en')"
+					class="w-full text-left rtl:text-right px-4 py-2.5 text-sm text-slate-700 dark:text-slate-300 hover:bg-slate-100 dark:hover:bg-white/10 flex items-center gap-2">🇺🇸
+					English</button>
+				<button onclick="changeLanguage('ar')"
+					class="w-full text-left rtl:text-right px-4 py-2.5 text-sm text-slate-700 dark:text-slate-300 hover:bg-slate-100 dark:hover:bg-white/10 flex items-center gap-2">🇸🇦
+					العربية</button>
+				<button onclick="changeLanguage('ja')"
+					class="w-full text-left rtl:text-right px-4 py-2.5 text-sm text-slate-700 dark:text-slate-300 hover:bg-slate-100 dark:hover:bg-white/10 flex items-center gap-2">🇯🇵
+					日本語</button>
 			</div>
 		</div>
 	</div>
@@ -880,4 +943,5 @@
 	<script src="translations.js"></script>
 	<script src="scripts.js"></script>
 </body>
+
 </html>

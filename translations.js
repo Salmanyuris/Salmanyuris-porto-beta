@@ -11,7 +11,7 @@ const translations = {
         },
         hero: {
             hello: "Halo,",
-            welcome: "Selamat datang di portofolio saya! Sebagai seorang Software Quality Assurance Junior, saya berkomitmen untuk memastikan keandalan, stabilitas, dan performa optimal pada setiap produk digital. Didukung keahlian komplementer di bidang Cloud Computing, Analisis Data, Pengembangan Web, dan Desain UI/UX, saya mengintegrasikan ketelitian teknis, kreativitas, dan standar kualitas tinggi untuk menghadirkan solusi teknologi yang berdampak nyata. Mari berkolaborasi untuk menciptakan inovasi digital yang luar biasa!",
+            welcome: "Sebagai IT Quality Assurance, saya berfokus pada memastikan kualitas, keandalan, dan stabilitas produk digital. Dengan pengalaman di bidang Cloud Computing, Analisis Data, Web Development, dan UI/UX, saya menggabungkan ketelitian teknis dan pemahaman teknologi untuk menghadirkan solusi digital yang berkualitas dan berdampak.",
             email: "Email",
             downloadCv: "Unduh CV"
         },
@@ -66,7 +66,7 @@ const translations = {
         },
         experience: {
             title: "Pengalaman Kerja",
-            qaTitle: "Software Quality Assurance Junior",
+            qaTitle: "IT Quality Assurance Junior",
             qaCompany: "PT. Mitra Integrasi Informatika (site: BNI Persero)",
             qaDate: "Jun 2026 - Sekarang",
             qaDesc: "Membuat Test Scenario, melakukan testing aplikasi (web/mobile), mengidentifikasi bug, serta memastikan kualitas sistem berjalan dengan baik untuk deployment di site BNI Persero.",
@@ -132,7 +132,7 @@ const translations = {
         },
         typewriter: [
             "Salman Yuris!",
-            "Software Quality Assurance!",
+            "IT Quality Assurance!",
             "Web Developer!",
             "Cloud Computing Engineer!",
             "UI/UX Designer!",
@@ -153,7 +153,7 @@ const translations = {
         },
         hero: {
             hello: "Hello,",
-            welcome: "Welcome to my portfolio! As a Junior Software Quality Assurance professional, I am dedicated to ensuring the reliability, stability, and optimal performance of digital systems. Supported by complementary expertise in Cloud Computing, Data Analysis, Web Development, and UI/UX Design, I integrate technical precision, creativity, and rigorous quality standards to deliver high-impact technological solutions. Let's collaborate to build extraordinary digital innovations!",
+            welcome: "As a IT Quality Assurance professional, I focus on ensuring the quality, reliability, and stability of digital products. With experience in Cloud Computing, Data Analysis, Web Development, and UI/UX, I combine technical precision and technological understanding to deliver high-quality and impactful digital solutions.",
             email: "Email",
             downloadCv: "Download CV"
         },
@@ -208,7 +208,7 @@ const translations = {
         },
         experience: {
             title: "Experience Journey",
-            qaTitle: "Software Quality Assurance Junior",
+            qaTitle: "IT Quality Assurance Junior",
             qaCompany: "PT. Mitra Integrasi Informatika (site: BNI Persero)",
             qaDate: "Jun 2026 - Present",
             qaDesc: "Creating Test Scenarios, performing application testing (web/mobile), identifying bugs, and ensuring system quality for deployment at BNI Persero site.",
@@ -274,7 +274,7 @@ const translations = {
         },
         typewriter: [
             "Salman Yuris!",
-            "Software Quality Assurance!",
+            "IT Quality Assurance!",
             "Web Developer!",
             "Cloud Computing Engineer!",
             "UI/UX Designer!",
@@ -295,7 +295,7 @@ const translations = {
         },
         hero: {
             hello: "مرحباً،",
-            welcome: "مرحباً بكم في معرض أعمالي! أعمل حالياً كمسؤول مبتدئ لضمان جودة البرمجيات (Software Quality Assurance Junior)، مع خبرة مكملة في الحوسبة السحابية، وتحليل البيانات، وتطوير الويب، وتصميم واجهات المستخدم (UI/UX). أجمع بين الدقة التقنية، والإبداع، والالتزام بالجودة لضمان أداء مثالي وتقديم تجارب رقمية ذات أثر ملموس. دعونا نتعاون لبناء حلول تكنولوجية استثنائية!",
+            welcome: "بصفتي متخصصاً في ضمان جودة البرمجيات، أركز على ضمان جودة وموثوقية واستقرار المنتجات الرقمية. مع خبرة في الحوسبة السحابية، وتحليل البيانات، وتطوير الويب، وتصميم واجهات المستخدم (UI/UX)، أجمع بين الدقة التقنية والفهم التكنولوجي لتقديم حلول رقمية عالية الجودة وذات تأثير.",
             email: "البريد الإلكتروني",
             downloadCv: "تحميل السيرة الذاتية"
         },
