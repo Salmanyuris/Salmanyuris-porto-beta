@@ -11,7 +11,7 @@ const translations = {
         },
         hero: {
             hello: "Halo,",
-            welcome: "Sebagai IT Quality Assurance dan UI/UX Designer, saya berfokus pada memastikan kualitas, keandalan, serta stabilitas produk digital. Dengan pendekatan berbasis desain intuitif dan ketelitian teknis, saya menggabungkan standar pengujian yang ketat serta riset pengalaman pengguna untuk menghadirkan solusi digital yang berkualitas tinggi, mudah digunakan, dan berdampak nyata.",
+            welcome: "Selamat datang! Saya Salman Yuris Adila Azzami, IT Quality Assurance di PT Bank Negara Indonesia (Persero) Tbk. Berpengalaman dalam pengujian sistem perbankan digital, saya berfokus memastikan keandalan, keamanan, dan kualitas software berskala besar secara terstruktur dan presisi. Silakan meninjau portofolio berikut untuk melihat rekam jejak dan kapabilitas teknis saya.",
             email: "Email",
             downloadCv: "Unduh CV"
         },
@@ -148,7 +148,7 @@ const translations = {
         },
         hero: {
             hello: "Hello,",
-            welcome: "As an IT Quality Assurance Specialist and UI/UX Designer, I focus on ensuring the quality, reliability, and stability of digital products. Combining intuitive design principles with technical precision, I integrate rigorous testing standards and user experience research to deliver high-quality, user-friendly, and impactful digital solutions.",
+            welcome: "Welcome! I am Salman Yuris Adila Azzami, IT Quality Assurance at PT Bank Negara Indonesia (Persero) Tbk. Experienced in testing digital banking systems, I focus on ensuring the reliability, security, and quality of large-scale software in a structured and precise manner. Please feel free to review the following portfolio to explore my track record and technical capabilities.",
             email: "Email",
             downloadCv: "Download CV"
         },
@@ -285,7 +285,7 @@ const translations = {
         },
         hero: {
             hello: "مرحباً،",
-            welcome: "بصفتي متخصصاً في ضمان جودة البرمجيات (IT QA) ومصمم واجهات المستخدم (UI/UX Designer)، أركز على ضمان جودة وموثوقية واستقرار المنتجات الرقمية. بجمع التصميم المبتكر مع الدقة التقنية والمعايير الصارمة للاختبار، أقدم حلولاً رقمية عالية الجودة وسهلة الاستخدام وذات تأثير ملموس.",
+            welcome: "مرحباً بكم! أنا سلمان يوريس أديلا أسامي، متخصص ضمان جودة تكنولوجيا المعلومات (IT Quality Assurance) في PT Bank Negara Indonesia (Persero) Tbk. أمتلك خبرة في اختبار أنظمة الخدمات المصرفية الرقمية، وأركز على ضمان موثوقية وأمان وجودة البرمجيات واسعة النطاق بنهج منظم ودقيق. أندعوكم لمراجعة معرض الأعمال التالي للاطلاع على مسيرتي ومؤهلاتي التقنية.",
             email: "البريد الإلكتروني",
             downloadCv: "تحميل السيرة الذاتية"
         },
@@ -422,7 +422,7 @@ const translations = {
         },
         hero: {
             hello: "こんにちは、",
-            welcome: "IT Quality Assurance および UI/UX デザイナーとして、デジタルプロダクトの品質、信頼性、安定性の確保に注力しています。直感的なデザイン思考と技術的な精密さを融合し、厳格なテスト基準とユーザーエクスペリエンス研究を通じて、高品質で使いやすく、インパクトのあるデジタルソリューションを提供します。",
+            welcome: "ようこそ！私は PT Bank Negara Indonesia (Persero) Tbk で IT Quality Assurance を務める サルマン・ユリス・アディラ・アザミ（Salman Yuris Adila Azzami）です。デジタルバンキングシステムのテスト経験を持ち、大規模ソフトウェアの信頼性、セキュリティ、品質を体系的かつ精密に確保することに注力しています。私の実績と技術的スキルについては、ぜひポートフォリオをご覧ください。",
             email: "メール",
             downloadCv: "CVをダウンロード"
         },
