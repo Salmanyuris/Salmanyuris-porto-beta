@@ -74,7 +74,6 @@ To run this portfolio locally on your machine:
 
 - 💼 **LinkedIn**: [Salman Yuris Adila Azzami](https://linkedin.com/in/salmanyuris)
 - 🐙 **GitHub**: [@Salmanyuris](https://github.com/Salmanyuris)
-- ✉️ **Email**: `salman.yuris@example.com` *(Replace with official email)*
 
 ---
 
