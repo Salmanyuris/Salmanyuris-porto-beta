@@ -55,12 +55,7 @@ document.addEventListener('DOMContentLoaded', function () {
             : [
                 "Salman Yuris!",
                 "IT Quality Assurance!",
-                "Web Developer!",
-                "Cloud Computing Engineer!",
-                "UI/UX Designer!",
-                "Data Scientist!",
-                "Laravel Developer!",
-                "Database Administrator!"
+                "UI/UX Designer!"
             ];
         let count = 0;
         let index = 0;

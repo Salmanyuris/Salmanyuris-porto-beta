@@ -133,12 +133,7 @@ const translations = {
         typewriter: [
             "Salman Yuris!",
             "IT Quality Assurance!",
-            "Web Developer!",
-            "Cloud Computing Engineer!",
-            "UI/UX Designer!",
-            "Data Scientist!",
-            "Laravel Developer!",
-            "Database Administrator!"
+            "UI/UX Designer!"
         ]
     },
     en: {
@@ -275,12 +270,7 @@ const translations = {
         typewriter: [
             "Salman Yuris!",
             "IT Quality Assurance!",
-            "Web Developer!",
-            "Cloud Computing Engineer!",
-            "UI/UX Designer!",
-            "Data Scientist!",
-            "Laravel Developer!",
-            "Database Administrator!"
+            "UI/UX Designer!"
         ]
     },
     ar: {
@@ -417,12 +407,7 @@ const translations = {
         typewriter: [
             "سلمان يوريس!",
             "ضمان جودة البرمجيات!",
-            "مطور ويب!",
-            "مهندس حوسبة سحابية!",
-            "مصمم واجهات المستخدم!",
-            "عالم بيانات!",
-            "مطور لارافيل!",
-            "مسؤول قواعد بيانات!"
+            "مصمم واجهات المستخدم!"
         ]
     },
     ja: {
@@ -559,12 +544,7 @@ const translations = {
         typewriter: [
             "サルマン・ユリス!",
             "ソフトウェア品質保証!",
-            "ウェブ開発者!",
-            "クラウドコンピューティングエンジニア!",
-            "UI/UXデザイナー!",
-            "データサイエンティスト!",
-            "Laravel開発者!",
-            "データベース管理者!"
+            "UI/UXデザイナー!"
         ]
     }
 };
