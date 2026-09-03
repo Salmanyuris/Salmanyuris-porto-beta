@@ -11,7 +11,7 @@ const translations = {
         },
         hero: {
             hello: "Halo,",
-            welcome: "Sebagai IT Quality Assurance, saya berfokus pada memastikan kualitas, keandalan, dan stabilitas produk digital. Dengan pengalaman di bidang Cloud Computing, Analisis Data, Web Development, dan UI/UX, saya menggabungkan ketelitian teknis dan pemahaman teknologi untuk menghadirkan solusi digital yang berkualitas dan berdampak.",
+            welcome: "Sebagai IT Quality Assurance dan UI/UX Designer, saya berfokus pada memastikan kualitas, keandalan, serta stabilitas produk digital. Dengan pendekatan berbasis desain intuitif dan ketelitian teknis, saya menggabungkan standar pengujian yang ketat serta riset pengalaman pengguna untuk menghadirkan solusi digital yang berkualitas tinggi, mudah digunakan, dan berdampak nyata.",
             email: "Email",
             downloadCv: "Unduh CV"
         },
@@ -148,7 +148,7 @@ const translations = {
         },
         hero: {
             hello: "Hello,",
-            welcome: "As a IT Quality Assurance professional, I focus on ensuring the quality, reliability, and stability of digital products. With experience in Cloud Computing, Data Analysis, Web Development, and UI/UX, I combine technical precision and technological understanding to deliver high-quality and impactful digital solutions.",
+            welcome: "As an IT Quality Assurance Specialist and UI/UX Designer, I focus on ensuring the quality, reliability, and stability of digital products. Combining intuitive design principles with technical precision, I integrate rigorous testing standards and user experience research to deliver high-quality, user-friendly, and impactful digital solutions.",
             email: "Email",
             downloadCv: "Download CV"
         },
@@ -285,7 +285,7 @@ const translations = {
         },
         hero: {
             hello: "مرحباً،",
-            welcome: "بصفتي متخصصاً في ضمان جودة البرمجيات، أركز على ضمان جودة وموثوقية واستقرار المنتجات الرقمية. مع خبرة في الحوسبة السحابية، وتحليل البيانات، وتطوير الويب، وتصميم واجهات المستخدم (UI/UX)، أجمع بين الدقة التقنية والفهم التكنولوجي لتقديم حلول رقمية عالية الجودة وذات تأثير.",
+            welcome: "بصفتي متخصصاً في ضمان جودة البرمجيات (IT QA) ومصمم واجهات المستخدم (UI/UX Designer)، أركز على ضمان جودة وموثوقية واستقرار المنتجات الرقمية. بجمع التصميم المبتكر مع الدقة التقنية والمعايير الصارمة للاختبار، أقدم حلولاً رقمية عالية الجودة وسهلة الاستخدام وذات تأثير ملموس.",
             email: "البريد الإلكتروني",
             downloadCv: "تحميل السيرة الذاتية"
         },
@@ -422,7 +422,7 @@ const translations = {
         },
         hero: {
             hello: "こんにちは、",
-            welcome: "ポートフォリオへようこそ！現在、ジュニアソフトウェア品質保証（Software Quality Assurance Junior）として活動しながら、クラウドコンピューティング、データ分析、Web開発、およびUI/UXデザインの専門知識も有しています。技術的な精密さ、創造性、そして品質への強いこだわりを融合させ、最適なパフォーマンスを保証し、インパクトのあるデジタル体験を提供します。素晴らしい技術ソリューションを一緒に作り上げましょう！",
+            welcome: "IT Quality Assurance および UI/UX デザイナーとして、デジタルプロダクトの品質、信頼性、安定性の確保に注力しています。直感的なデザイン思考と技術的な精密さを融合し、厳格なテスト基準とユーザーエクスペリエンス研究を通じて、高品質で使いやすく、インパクトのあるデジタルソリューションを提供します。",
             email: "メール",
             downloadCv: "CVをダウンロード"
         },
